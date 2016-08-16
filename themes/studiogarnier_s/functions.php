@@ -148,3 +148,31 @@ require get_template_directory() . '/inc/jetpack.php';
 
 /* FUNCTIONS AJOUTER POUR LE DEVELOPPEMENT DE GARNIER STUDIO/
     */
+
+
+	register_post_type(
+			   'reference',
+			      array(
+			           'label' => 'References',
+			           'labels' => array(       
+			           		'name' => 'Références',       
+			           		'singular_name' => 'Référence',       
+			           		'all_items' => 'Toutes les référence',       
+			           		'add_new_item' => 'Ajouter une référence',       
+			           		'edit_item' => 'Éditer une référence',       
+			           		'new_item' => 'Créer une nouvelle référence',       
+			           		'view_item' => 'Voir référence',       
+			           		'search_items' => 'Rechercher parmi les références',       
+			           		'not_found' => 'Aucune référence trouvée',       
+			           		'not_found_in_trash'=> 'Aucune référence dans la corbeille'       
+			           		),     
+			           'public' => true,     
+			           'capability_type' => 'post',     
+			           'supports' => array(       
+			           		'title',       
+			           		'editor',       
+			           		'thumbnail'     
+			           		),     
+			           'has_archive' => true   
+			           )
+                );
