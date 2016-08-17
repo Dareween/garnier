@@ -110,17 +110,17 @@ add_action( 'widgets_init', 'studiogarnier_widgets_init' );
  */
 function studiogarnier_scripts() {
        
-        
-     wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
+   /*ajout de bootstrap css*/
+    wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
 	
-     wp_enqueue_style( 'studiogarnier-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'studiogarnier-style', get_stylesheet_uri() );
         
+    wp_enqueue_script( 'studiogarnier-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'studiogarnier-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'studiogarnier-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+    wp_enqueue_script( 'studiogarnier-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
         
-       wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'), '3.3.4', true );
+       /*ajout de bootstrap js*/ 
+    wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'), '3.3.4', true );
 
         
 
@@ -156,8 +156,14 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 
-/* FUNCTIONS AJOUTER POUR LE DEVELOPPEMENT DE GARNIER STUDIO/
-    */
+/* -----------------------------------------------------------------
+ * FUNCTIONS AJOUTER POUR LE DEVELOPPEMENT DE GARNIER STUDIO/
+   ------------------------------------------------------------------ */
+
+/**
+ * Ajoute une navigation bootstrap 'primary'
+ */
+require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
 
 	register_post_type(
@@ -186,3 +192,5 @@ require get_template_directory() . '/inc/jetpack.php';
 			           'has_archive' => true   
 			           )
                 );
+        
+

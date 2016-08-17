@@ -876,3 +876,124 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+
+
+/*--------------------------------------------------------------
+# CSS STUDIO GARNIER
+--------------------------------------------------------------*/
+
+
+/* Polices*/
+
+@import 'https://fonts.googleapis.com/css?family=Droid+Sans:400,700';
+
+html{
+    font-family: 'Droid Sans', sans-serif;
+   
+   
+}
+
+h1, h2, h3{
+    font-family: 'Droid Sans', sans-serif;
+    font-weight:bold;
+   
+}
+.navbar-default .navbar-nav>li>a,
+.navbar-nav a{
+    font-family: 'Droid Sans', sans-serif;
+    font-weight:bold;
+    color: #000;
+   
+}
+
+
+
+
+/*--------------------------------------------------------------
+                            Header 
+--------------------------------------------------------------*/
+
+/*-------------------------  Navbar ----------------------------*/
+
+.navbar{
+    padding: 30px 60px 5px 45px;
+}
+
+.navbar-nav a {
+    font-size: 20px;
+    color: #000;
+    text-transform:lowercase;
+}
+
+.navbar-nav>li>a {
+    padding: 13px 10px 13px 10px;
+    
+}
+
+.site-branding{
+    padding-right: 10px;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #555;
+    background-color: transparent;
+}
+
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>li>a:hover,
+#menu-menu-principal > li.menu-item.menu-item-type-post_type.menu-item-object-page.current-menu-ancestor.current-menu-parent.current_page_parent.current_page_ancestor.menu-item-has-children ul > li.active > a {  
+    color: #ff007a;
+    background-color: transparent;
+}
+
+
+#menu-menu-principal a:focus span{
+    border-top: 4px dashed #ff007a;
+}
+
+#menu-menu-principal > li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-has-children.dropdown > a:focus {
+    color: #ff007a;
+}
+
+.navbar-default {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-color: gba(255, 255, 255, 0.95);
+}
+
+
+/* ------------------------- Logo ---------------------------- */
+
+/* cache le texte du site title */
+.site-title {
+    text-indent: -9999px;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+
+/* ------------------------- Reseaux sociaux ---------------------------- */
+
+
+nav ul a img{
+    height: 12px;
+   
+}
+
+ 
+
+
+
+/*--------------------------------------------------------------
+                            Footer
+--------------------------------------------------------------*/
+
+
+.site-footer{
+    background-color: #434343;
+}
+
+
+
+
