@@ -166,6 +166,30 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
 
+      function custom_nav(){
+	$navigation = '';
+	$previous   = get_previous_post_link( '<div class="nav-previous">%link</div>', '%title', true );
+	$next       = get_next_post_link( '<div class="nav-next">%link</div>', '%title', true );
+
+	// Only add markup if there's somewhere to navigate to.
+	if ( $previous || $next ) {
+		$navigation = _navigation_markup( $previous . $next, 'post-navigation' );
+	}
+
+	echo $navigation;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 	register_post_type(
 			   'reference',
 			      array(
@@ -173,7 +197,7 @@ require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 			           'labels' => array(       
 			           		'name' => 'Références',       
 			           		'singular_name' => 'Référence',       
-			           		'all_items' => 'Toutes les référence',       
+			           		'all_items' => 'Toutes les références',       
 			           		'add_new_item' => 'Ajouter une référence',       
 			           		'edit_item' => 'Éditer une référence',       
 			           		'new_item' => 'Créer une nouvelle référence',       
@@ -193,4 +217,86 @@ require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 			           )
                 );
         
+  
+        
+        
+        
+        
+register_post_type(
+		'prestation',
+			      array(
+			           'label' => 'Prestations',
+			           'labels' => array(       
+			           		'name' => 'Prestations',       
+			           		'singular_name' => 'Prestation',       
+			           		'all_items' => 'Toutes les Prestations',       
+			           		'add_new_item' => 'Ajouter une Prestation',       
+			           		'edit_item' => 'Éditer une Prestation',       
+			           		'new_item' => 'Créer une nouvelle Prestation',       
+			           		'view_item' => 'Voir Prestation',       
+			           		'search_items' => 'Rechercher parmi les Prestations',       
+			           		'not_found' => 'Aucune Prestation trouvée',       
+			           		'not_found_in_trash'=> 'Aucune Prestation dans la corbeille'       
+			           		),     
+			           'public' => true,     
+			           'capability_type' => 'post',     
+			           'supports' => array(       
+			           		'title',       
+			           		'editor',       
+			           		'thumbnail'     
+			           		),     
+			           'has_archive' => true   
+			           )
+                );
+ 
 
+  register_taxonomy(   
+		'type_prestation',  
+                'prestation',
+		array(     
+			'label' => 'type_prestation',     
+			'labels' => array(     
+				'name' => 'Type de prestation',     
+				'singular_name' => 'type de prestation',     
+				'all_items' => 'Tous les types de prestation',     
+				'edit_item' => 'Éditer le type de prestation',     
+				'view_item' => 'Voir la prestation',     
+				'update_item' => 'Mettre à jour le type de prestation',     
+				'add_new_item' => 'Ajouter un type prestation',     
+				'new_item_name' => 'Nouveau type de prestation',     
+				'search_items' => 'Rechercher parmi les types de prestation',     
+				'popular_items' => 'Types de prestation les plus utilisés'   
+				), 
+				
+			'hierarchical' => true   
+			) 
+		); 
+        
+          register_taxonomy(   
+		'cat_reference', 
+                 'reference', 
+		array(     
+			'label' => 'cat_reference',     
+			'labels' => array(     
+				'name' => 'Catégorie de référence',     
+				'singular_name' => 'Catégorie de référence',     
+				'all_items' => 'Toutes les catégories de référence',     
+				'edit_item' => 'Éditer la catégorie',     
+				'view_item' => 'Voir la catégorie',     
+				'update_item' => 'Mettre à jour la catégorie',     
+				'add_new_item' => 'Ajouter une catégorie',     
+				'new_item_name' => 'Nouvelle catégorie',     
+				'search_items' => 'Rechercher parmi les catégories',     
+				'popular_items' => 'Catégories les plus utilisées'   
+				), 
+				
+			'hierarchical' => true   
+			) 
+		); 
+        
+        register_taxonomy_for_object_type( 'type', 'prestation' ); 
+	register_taxonomy_for_object_type( 'serie', 'reference' );
+
+
+
+ 
