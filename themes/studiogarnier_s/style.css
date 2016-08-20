@@ -1030,7 +1030,7 @@ nav ul a img{
     background-color: #434343;
     color:#fff;
     font-family: 'Droid Sans', sans-serif;
-    font-weight:regular;
+    font-weight: 400;
     font-size: 14px;
 }
 
@@ -1173,3 +1173,86 @@ h1.entry-title{
     margin: 0;
 }
 
+
+/*--------------------------------------------------------------
+                            Single
+--------------------------------------------------------------*/
+
+
+h1.entry-title, h2.entry-title{
+    text-align: center;
+    margin-top:40px;
+    margin-bottom:30px;
+}
+
+h2.entry-title a{
+    color:#000;
+}
+
+h2.entry-title a:hover, h2.entry-title a:focus{
+    color:#ff007a;
+    text-decoration: none;
+}
+
+
+.cadre{
+    border-style: solid;
+    border-top-color: transparent;
+    border-bottom-color: #ff007a;
+    border-right-color: #ff007a;
+    border-left-color: #ff007a;
+}
+
+.single-date hr{
+    max-width: 100%;
+    margin: 5px 350px 30px 350px;
+   
+    color: #ff007a;
+    border-top: 3px solid;
+    
+}
+
+.single-date{
+    color:#ff007a;
+    text-align: center;
+    font-size: 18px;
+    margin: 0 0 30px 0;
+}
+
+
+.entry-content p{
+    padding : 0 10% 0 10%;
+    margin-top: 20px;
+     
+}
+
+
+.single-content>div{
+    margin:0;
+    padding:0;
+    
+}
+
+div.single-cat-hr > hr{
+    max-width: 100%;
+    margin: 15px 350px 30px 350px;
+    background-color: #000;
+   height:2px;
+    
+}
+
+.entry-content .categories{
+   text-align: center;
+}
+
+.entry-content a, .entry-content a:visited{
+    color: #000;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.entry-content a:focus, .entry-content a:hover{
+    color: #ff007a;
+    text-decoration: none;
+    font-weight: 400;
+}

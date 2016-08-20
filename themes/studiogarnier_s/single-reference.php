@@ -22,7 +22,7 @@ get_header(); ?>
                         next_post_link( '%link', '%title', TRUE );
                         
                    
-			get_template_part( 'template-parts/content', 'reference' );
+			get_template_part( 'template-parts/content-reference', get_post_format() );
                         
                         
                         previous_post_link('%link','<i class="fa fa-chevron-left"></i><span class="label hidden-mobile">Précédent</span>', TRUE, ' ', 'post_format' );
