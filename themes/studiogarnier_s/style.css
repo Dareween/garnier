@@ -30,6 +30,11 @@ Version : 1.0
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+/* Polices*/
+
+@import'https://fonts.googleapis.com/css?family=Droid+Sans:400,700';
+
+
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -889,9 +894,6 @@ object {
 --------------------------------------------------------------*/
 
 
-/* Polices*/
-
-@import 'https://fonts.googleapis.com/css?family=Droid+Sans:400,700';
 
 
 
@@ -1124,7 +1126,31 @@ margin : 8px 0 0px 0;
 }
 
 
+/*--------------------------------------------------------------
+                            Page Prestation
+--------------------------------------------------------------*/
 
+
+.prestation, .image-prestation {
+    margin:0;
+    padding : 0;
+}
+
+description.prestation{
+    margin:0;
+   
+}
+
+.description-prestation h3{
+    padding : 45px 45px 5px 45px;
+    margin: 0;
+} 
+
+.description-prestation p{
+    padding : 0px 45px 5px 45px;
+    margin: 0;
+    
+} 
 
 /*--------------------------------------------------------------
                             Reference
@@ -1172,6 +1198,7 @@ h1.entry-title{
     padding: 0;
     margin: 0;
 }
+
 
 
 /*--------------------------------------------------------------
@@ -1256,3 +1283,40 @@ div.single-cat-hr > hr{
     text-decoration: none;
     font-weight: 400;
 }
+
+
+
+@media all and (max-width: 640px)  {
+    
+    
+    
+/*--------------------------------------------------------------
+                            Page Prestation
+--------------------------------------------------------------*/
+
+
+.prestation:nth-child(2n+1){
+   
+    display: flex;
+     flex-direction: column;
+
+}
+
+.prestation:nth-child(2n+1)>.element:nth-child(1) {
+  
+    background: green;
+    order:2;
+    width:100%;
+}
+
+.prestation:nth-child(2n+1)>.element:nth-child(2) {
+    
+    background: yellow;
+    order:1;
+    width:100%;
+}
+
+    
+}
+    
+    
