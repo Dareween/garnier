@@ -110,6 +110,15 @@ function studiogarnier_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+        register_sidebar( array(
+		'name'          => esc_html__( 'Load-more', 'studiogarnier' ),
+		'id'            => 'sidebar-3',
+		'description'   => esc_html__( 'Add widgets here.', 'studiogarnier' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'studiogarnier_widgets_init' );
 
@@ -240,6 +249,34 @@ register_post_type(
 			           		'search_items' => 'Rechercher parmi les Prestations',       
 			           		'not_found' => 'Aucune Prestation trouvée',       
 			           		'not_found_in_trash'=> 'Aucune Prestation dans la corbeille'       
+			           		),     
+			           'public' => true,     
+			           'capability_type' => 'post',     
+			           'supports' => array(       
+			           		'title',       
+			           		'editor',       
+			           		'thumbnail'     
+			           		),     
+			           'has_archive' => true   
+			           )
+                );
+
+
+register_post_type(
+		'animation',
+			      array(
+			           'label' => 'Animations',
+			           'labels' => array(       
+			           		'name' => 'Animations',       
+			           		'singular_name' => 'Animation',       
+			           		'all_items' => 'Toutes les animations',       
+			           		'add_new_item' => 'Ajouter une animation',       
+			           		'edit_item' => 'Éditer une animation',       
+			           		'new_item' => 'Créer une nouvelle animation',       
+			           		'view_item' => 'Voir animation',       
+			           		'search_items' => 'Rechercher parmi les animations',       
+			           		'not_found' => 'Aucune animation trouvée',       
+			           		'not_found_in_trash'=> 'Aucune animation dans la corbeille'       
 			           		),     
 			           'public' => true,     
 			           'capability_type' => 'post',     

@@ -13,21 +13,21 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
                  <section class="col-md-9">
                      
-                     test
 		<?php
 		if ( have_posts() ) : ?>
                        
-			<header class="page-header">
+			<div class="page-header header-taxonomy">
 				<?php
                                         
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
-			</header><!-- .page-header -->
+			</div><!-- .page-header -->
 
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
+                            
 
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -45,15 +45,20 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
                        
                        
-                    
-
+                 
 		endif; ?>
-                     
-                </section>        
+          
+ 
+
+                </section>
+                    <aside class="col-md-3">
+               <?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('Sidebar') ) ?>
+                      
+                </aside>
                
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();

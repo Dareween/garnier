@@ -23,7 +23,7 @@ get_header(); ?>
                               
                             </header>  
                             <section class="content-home">
-                                 <h1><?php single_post_title(); ?></h1>
+                                 <h1 class="titre-home"><?php single_post_title(); ?></h1>
                                  <?php the_content( sprintf(
 				/* translators: %s: Name of current post. */
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'studiogarnier' ), array( 'span' => array( 'class' => array() ) ) ),
@@ -59,9 +59,11 @@ get_header(); ?>
                                     
                                 </div>
                             </section>
-                            <section>  
+                            <section class="quelques-references">  
                                 <h3 class="titre-home">Quelques références</h3>
-                                    <?php $loop = new WP_Query( array( 'post_type' => 'reference', 'posts_per_page' => '10' ) ); ?>
+                                <div class="row"><div class="col-md-4"></div><div class="col-md-4 trait-qqs-ref"></div><div class="col-md-4"></div></div>
+                                    <div class="vignettes-ref-home">
+                                        <?php $loop = new WP_Query( array( 'post_type' => 'reference', 'posts_per_page' => '8' ) ); ?>
                                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                                      <div class="col-md-3 vignette">
                                     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -70,9 +72,31 @@ get_header(); ?>
                                     </article><!-- #post-## -->
                                     </div><!-- .vignette -->
                                     <?php endwhile; wp_reset_query(); ?>
+                                    </div>
                                     
                              </section>
-                           
+                             <section>
+                                 <div class="row">
+                                      <div class="vignettes-ref-home">
+                                        <?php $loop = new WP_Query( array( 'post_type' => 'partenaires', 'posts_per_page' => '6' ) ); ?>
+                                    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                                     <div class="col-md-2 vignette">
+                                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                                    <a href="<?php the_field('lien'); ?>"><img src="<?php the_field('logo'); ?>"></a>
+                                     <a href="<?php the_field('lien'); ?>"><div style="background-image: url(<?php the_field('logo'); ?>); height: 200px; width: 400px; border: 1px solid black;"></div></a>
+                             
+                                    
+
+                                    </article><!-- #post-## -->
+                                    </div><!-- .vignette -->
+                                    <?php endwhile; wp_reset_query(); ?>
+                                    </div>
+                                     
+                                 </div>
+                             </section>
+                        
+                        QqSQswqqqqqqqqqqqqqqqqqqqq
+                       </div>
                             <?php
 
                         else :
@@ -80,6 +104,7 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
                         endif; ?>
+                    
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

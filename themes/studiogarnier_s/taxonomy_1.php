@@ -12,21 +12,22 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
                  <section class="col-md-9">
-                    
+                     
 		<?php
 		if ( have_posts() ) : ?>
                        
-			<header class="page-header">
+			<div class="page-header header-taxonomy">
 				<?php
                                         
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
-			</header><!-- .page-header -->
+			</div><!-- .page-header -->
 
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
+                            
 
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -40,20 +41,27 @@ get_header(); ?>
 			the_posts_navigation();
 
 		else :
-
+                            
 			get_template_part( 'template-parts/content', 'none' );
+                       
+                       
+                    
 
 		endif; ?>
-                       
-                </section>        
-                <aside class="col-md-3">
-                       <?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('Sidebar') ) ?>
-                       
+                               <?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('Sidebar') ) ?>
+                        <?php
+                        $tag = get_query_var('tag'); 
+                        echo do_shortcode('[ajax_load_more tag="'.$tag.'"]');
+                            ?>
+                </section>
+                    <aside class="col-md-3">
+              
+                      
                 </aside>
-
+               
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();
