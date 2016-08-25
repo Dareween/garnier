@@ -12,6 +12,8 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
                  <section class="col-md-9">
+                     
+                     test
 		<?php
 		if ( have_posts() ) : ?>
                        
@@ -39,15 +41,16 @@ get_header(); ?>
 			the_posts_navigation();
 
 		else :
-
+                            
 			get_template_part( 'template-parts/content', 'none' );
+                       
+                       
+                    
 
 		endif; ?>
+                     
                 </section>        
-                <aside class="col-md-3">
-                       <?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('Sidebar') ) ?>
-                </aside>
-
+               
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

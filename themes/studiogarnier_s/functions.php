@@ -101,8 +101,20 @@ function studiogarnier_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+        register_sidebar( array(
+		'name'          => esc_html__( 'Cat-accueil', 'studiogarnier' ),
+		'id'            => 'sidebar-2',
+		'description'   => esc_html__( 'Add widgets here.', 'studiogarnier' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'studiogarnier_widgets_init' );
+
+
+
 
 
 /**
@@ -181,15 +193,6 @@ require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
 
 
-
-
-
-
-
-
-
-
-
 	register_post_type(
 			   'reference',
 			      array(
@@ -248,15 +251,43 @@ register_post_type(
 			           'has_archive' => true   
 			           )
                 );
+
+register_post_type(
+		'partenaires',
+			      array(
+			           'label' => 'Partenaires',
+			           'labels' => array(       
+			           		'name' => 'Partenaires',       
+			           		'singular_name' => 'partenaire',       
+			           		'all_items' => 'Tous les partenaires',       
+			           		'add_new_item' => 'Ajouter un partenaire',       
+			           		'edit_item' => 'Éditer un partenaire',       
+			           		'new_item' => 'Créer un nouveau partenaire',       
+			           		'view_item' => 'Voir partenaire',       
+			           		'search_items' => 'Rechercher parmi les partenaires',       
+			           		'not_found' => 'Aucun  partenaire trouvé',       
+			           		'not_found_in_trash'=> 'Aucun partenaire dans la corbeille'       
+			           		),     
+			           'public' => true,     
+			           'capability_type' => 'post',     
+			           'supports' => array(       
+			           		'title',       
+			           		       
+			           		    
+			           		),     
+			           'has_archive' => true   
+			           )
+                );
+
  
 
   register_taxonomy(   
-		'type_prestation',  
-                'prestation',
+		'prestations',  
+                'reference',
 		array(     
-			'label' => 'type_prestation',     
+			'label' => 'prestations',     
 			'labels' => array(     
-				'name' => 'Type de prestation',     
+				'name' => 'Catégorie prestation',     
 				'singular_name' => 'type de prestation',     
 				'all_items' => 'Tous les types de prestation',     
 				'edit_item' => 'Éditer le type de prestation',     
@@ -272,15 +303,15 @@ register_post_type(
 			) 
 		); 
         
-          register_taxonomy(   
-		'cat_reference', 
+register_taxonomy(   
+		'animations', 
                  'reference', 
 		array(     
-			'label' => 'cat_reference',     
+			'label' => 'animations',     
 			'labels' => array(     
-				'name' => 'Catégorie de référence',     
-				'singular_name' => 'Catégorie de référence',     
-				'all_items' => 'Toutes les catégories de référence',     
+				'name' => 'Catégorie animation',     
+				'singular_name' => 'Catégorie animation',     
+				'all_items' => 'Toutes les catégories animation',     
 				'edit_item' => 'Éditer la catégorie',     
 				'view_item' => 'Voir la catégorie',     
 				'update_item' => 'Mettre à jour la catégorie',     
@@ -293,10 +324,26 @@ register_post_type(
 			'hierarchical' => true   
 			) 
 		); 
-        
-        register_taxonomy_for_object_type( 'type', 'prestation' ); 
-	register_taxonomy_for_object_type( 'serie', 'reference' );
+    
+register_taxonomy(   
+		'evenements', 
+                 'reference', 
+		array(     
+			'label' => 'evenements',     
+			'labels' => array(     
+				'name' => 'Catégorie événement',     
+				'singular_name' => 'Catégorie événement',     
+				'all_items' => 'Toutes les catégories événements',     
+				'edit_item' => 'Éditer la catégorie',     
+				'view_item' => 'Voir la catégorie',     
+				'update_item' => 'Mettre à jour la catégorie',     
+				'add_new_item' => 'Ajouter une catégorie',     
+				'new_item_name' => 'Nouvelle catégorie',     
+				'search_items' => 'Rechercher parmi les catégories',     
+				'popular_items' => 'Catégories les plus utilisées'   
+				), 
+				
+			'hierarchical' => true   
+			) 
+		); 
 
-
-
- 

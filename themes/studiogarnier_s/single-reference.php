@@ -12,7 +12,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
             <main role="main" role="main">
 		
-                
+                <div class="container">
                 <section class="reference-content">
 		<?php
 		while ( have_posts() ) : the_post();
@@ -39,8 +39,10 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
                     
-                </div>
+                
                 </section>
+                    
+                </div>
                
 
 		</main><!-- #main -->

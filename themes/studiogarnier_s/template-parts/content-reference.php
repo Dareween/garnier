@@ -10,13 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="entry-header-single-reference">
             
 		<?php
 		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1 class="entry-title-reference">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h2 class="entry-title-reference"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) : ?>
@@ -28,9 +28,11 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	
+        <div class="entry-content-single-reference">
                 
-                 <?php the_post_thumbnail( 'full' ); ?>
+                 <?php get_template_part( 'template-parts/carousel', 'carousel' );
+                  ?>
                 <div class="ref-description"> <?php the_field('description'); ?></div>
                  
 		<?php
@@ -51,7 +53,12 @@
                 
                 <div class="categories">Catégories : </div>
                  <span class="meta-post">
-                <?php echo get_the_term_list( $post->ID, 'cat_reference', '', ', ', '' ); ?>
+                <?php echo get_the_term_list( $post->ID, 'animations', '', ', ', ',' ); ?>
+                 
+               <?php echo get_the_term_list( $post->ID, 'evenements', '', ', ', ',' ); ?>
+                
+                <?php echo get_the_term_list( $post->ID, 'prestations', '', ', ', '' ); ?>
+                    
                 </span><br>
                 
                
@@ -61,3 +68,4 @@
 		<?php studiogarnier_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+

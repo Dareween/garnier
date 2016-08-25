@@ -924,6 +924,12 @@ h1, h2, h3{
    
 }
 
+
+a, a:visited, a:focus, a:visited{
+    color: #ff007a;
+    text-decoration: none;
+}
+
 footer a, footer a:visited{
     color: #fff;
     text-decoration: none;
@@ -943,6 +949,9 @@ footer a:focus, footer a:hover{
 }
 
 
+.container-fluid{
+    padding:0px
+}
 
 
 
@@ -1152,6 +1161,34 @@ description.prestation{
     
 } 
 
+
+
+
+.btn-voir {
+    padding: 8px 13px;
+    border-radius:2px;
+    border: 2px solid;
+    border-color: #ff007a;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color:#fff;
+    
+}
+
+.btn.btn-voir {
+  border-radius:2px;
+  border: 2px solid;
+  background-color: #fff;
+  border-color: #ff007a;
+  
+}
+
+.btn-voir:hover{
+    background-color: #eee;
+    border-color: #ff007a;
+}
+
+
 /*--------------------------------------------------------------
                             Reference
 --------------------------------------------------------------*/
@@ -1188,6 +1225,18 @@ h1.entry-title{
     color: #ff007a;
     font-weight: regular; 
 }
+
+.entry-header-single-reference{
+    margin-top:25px;
+}
+
+.entry-header-single-reference .entry-title-reference{
+   
+    padding-top: 30px;
+    text-align: center;
+    margin-bottom:30px;
+}
+
 
 
 /*--------------------------------------------------------------
@@ -1285,6 +1334,145 @@ div.single-cat-hr > hr{
 }
 
 
+/*--------------------------------------------------------------
+                            Page Accueil
+--------------------------------------------------------------*/
+
+
+/*--------- Liste catégories animations ----------------------*/
+
+#sgr-custom-taxonomies-menu-3, #sgr-custom-taxonomies-menu-4 {
+    width:50%;
+    display: inline-block;
+    margin:60px 0 80px 0;
+    padding: 0;
+    
+}
+
+#sgr-custom-taxonomies-menu-3 li, #sgr-custom-taxonomies-menu-4 li{
+list-style: none;
+text-transform: capitalize;
+}
+
+#sgr-custom-taxonomies-menu-3 li a, #sgr-custom-taxonomies-menu-4 li a{
+ color: #111;
+}
+
+#sgr-custom-taxonomies-menu-3 li a:hover, #sgr-custom-taxonomies-menu-4 li a:hover{
+ color: #ff007a;
+}
+
+#sgr-custom-taxonomies-menu-3 {
+    padding: 15px 0 0 220px;
+}
+
+#sgr-custom-taxonomies-menu-4 {
+    border-left: #ff007a solid;
+    padding: 15px 0 0 30px;
+}
+
+
+
+
+/*--------- Contenu Home ----------------------*/
+
+h1{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:80px;
+    margin-bottom:60px;
+}
+
+.content-home p{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 70px 0 70px;
+    
+}
+
+  
+.titre-home{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:80px;
+    margin-bottom:60px;
+}
+/*--------- Lines vers pages Prestations ----------------------*/
+
+.lien-prestation-home{
+   text-align: center;
+   height: 70px;
+   font-weight: 700;
+   font-size: 16px;
+   text-transform: uppercase;
+   padding:0 90px 0px 90px;
+   background-color: #e3e0dd;
+ 
+}
+
+
+
+
+.container-oblique{
+    height: 20px;
+    background-color: #e3e0dd;
+    position : relative;
+}
+
+.oblique-1 {
+    display: inline-block;
+   height: 100px;
+ 
+   position: absolute;
+   left: Opx;
+   top:0px;
+    border-top: 2px solid #ff007a;
+    background-color: #e3e0dd;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -ms-transform-origin: 20% 40%; /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    -webkit-transform-origin: 20% 40%; /* Chrome, Safari, Opera */
+    transform: rotate(5deg);
+    transform-origin: 100% 0%;
+}
+
+.oblique-2 {
+    display: inline-block;
+   height: 100px;
+    position: absolute ;
+
+    right: 0px;
+    top:0px;
+    border-top: 2px solid #ff007a;
+    background-color: #e3e0dd;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -ms-transform-origin: 20% 40%; /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    -webkit-transform-origin: 20% 40%; /* Chrome, Safari, Opera */
+    transform: rotate(-5deg);
+    transform-origin: 0% 0%;
+}
+
+
+.lien-presta-2{
+    border-left: 2px solid #ff007a;
+    border-right: 2px solid #ff007a;
+}
+
+.lien-presta-3{
+   
+    border-right: 2px solid #ff007a;
+    
+}
+
+.fond-gris{
+    height: 50px;
+    background-color: #e3e0dd;
+}
+
 
 @media all and (max-width: 640px)  {
     
@@ -1318,5 +1506,4 @@ div.single-cat-hr > hr{
 
     
 }
-    
     

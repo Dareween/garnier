@@ -21,7 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
- <div class="container-fluid">
+ <div>
   <div class="row">
     
 <div id="page" class="site">
@@ -67,7 +67,7 @@
 							<?php
 							endif;
                                                         ?>
-                                                        <img src="http://devgarnier.dareween.fr/wp-content/uploads/2016/08/logo.png" alt="logo">
+                                                                <a href="<?php echo bloginfo('wpurl');?>"><img src="http://devgarnier.dareween.fr/wp-content/uploads/2016/08/logo.png" alt="logo"></a>
 			
 					   </div><!-- .site-branding -->
 			        </div><!--end navbar-header-->
@@ -109,5 +109,5 @@
 			</nav>
 	</header><!-- #masthead -->
 
-	<div id="content" class="container site-content">
+	<div id="content" class="site-content">
              

@@ -12,6 +12,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
                  <section class="col-md-9">
+                    
 		<?php
 		if ( have_posts() ) : ?>
                        
@@ -46,6 +47,7 @@ get_header(); ?>
                 </section>        
                 <aside class="col-md-3">
                        <?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('Sidebar') ) ?>
+                       
                 </aside>
 
 		</main><!-- #main -->
