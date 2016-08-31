@@ -324,8 +324,8 @@ register_post_type(
 		array(     
 			'label' => 'prestations',     
 			'labels' => array(     
-				'name' => 'Catégorie prestation',     
-				'singular_name' => 'type de prestation',     
+				'name' => 'Votre prestation',     
+				'singular_name' => 'Prestations',     
 				'all_items' => 'Tous les types de prestation',     
 				'edit_item' => 'Éditer le type de prestation',     
 				'view_item' => 'Voir la prestation',     
@@ -346,8 +346,8 @@ register_taxonomy(
 		array(     
 			'label' => 'animations',     
 			'labels' => array(     
-				'name' => 'Catégorie animation',     
-				'singular_name' => 'Catégorie animation',     
+				'name' => 'Votre animation',     
+				'singular_name' => 'Animations',     
 				'all_items' => 'Toutes les catégories animation',     
 				'edit_item' => 'Éditer la catégorie',     
 				'view_item' => 'Voir la catégorie',     
@@ -368,8 +368,8 @@ register_taxonomy(
 		array(     
 			'label' => 'evenements',     
 			'labels' => array(     
-				'name' => 'Catégorie événement',     
-				'singular_name' => 'Catégorie événement',     
+				'name' => 'Votre événement',     
+				'singular_name' => 'Evénements',     
 				'all_items' => 'Toutes les catégories événements',     
 				'edit_item' => 'Éditer la catégorie',     
 				'view_item' => 'Voir la catégorie',     

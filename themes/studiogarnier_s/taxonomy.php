@@ -11,19 +11,23 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-                 <section class="col-md-9">
+                    <div class="container-fuid page-taxonomy">
+                        <div class="row">
+                          <div class="col-sm-9">
                      
+                     
+                  
 		<?php
 		if ( have_posts() ) : ?>
                        
 			<div class="page-header header-taxonomy">
 				<?php
                                         
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_title( '<h1 class="page-title">', '</h1><br><hr>' );
 					the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</div><!-- .page-header -->
-
+                        <section class="boucle-references">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
@@ -49,13 +53,17 @@ get_header(); ?>
 		endif; ?>
           
  
-
-                </section>
-                    <aside class="col-md-3">
-               <?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('Sidebar') ) ?>
+                        </section>
+                </div>
+                    <aside class="col-sm-3">
+                        
+               <?php 
+               
+               if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('Sidebar') ) ?>
                       
                 </aside>
-               
+                    </div>        
+                    </div>    
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

@@ -10,11 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<header class="entry-header entry-header-page container-fluid">
+                
+                <?php the_post_thumbnail( 'full' ); ?>
+		<?php the_title( '<h1 class="entry-title entry-title-page">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content container">
 		<?php
 			the_content();
 
@@ -26,7 +28,7 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		<footer class="entry-footer container">
 			<?php
 				edit_post_link(
 					sprintf(

@@ -16,7 +16,8 @@ get_header(); ?>
                 <section class="reference-content">
 		<?php
 		while ( have_posts() ) : the_post();
-                
+                        
+                        
                         the_post_navigation();
                         previous_post_link('%link', '%title', TRUE);
                         next_post_link( '%link', '%title', TRUE );
@@ -25,8 +26,8 @@ get_header(); ?>
 			get_template_part( 'template-parts/content-reference', get_post_format() );
                         
                         
-                        previous_post_link('%link','<i class="fa fa-chevron-left"></i><span class="label hidden-mobile">Précédent</span>', TRUE, ' ', 'post_format' );
-                        next_post_link( '%link', '<span class="label hidden-mobile">Suivant</span><i class="fa fa-chevron-right"></i>', TRUE, ' ', 'post_format'  );
+                        previous_post_link('%link','<i class="fa fa-chevron-left"></i><span class="label hidden-mobile">Précédent</span>', TRUE, ' ', '' );
+                        next_post_link( '%link', '<span class="label hidden-mobile">Suivant</span><i class="fa fa-chevron-right"></i>', TRUE, ' ', ''  );
                                                     
 			
                         
@@ -49,5 +50,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();

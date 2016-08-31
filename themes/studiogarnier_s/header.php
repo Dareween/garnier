@@ -21,11 +21,9 @@
 </head>
 
 <body <?php body_class(); ?>>
- <div>
-  <div class="row">
-    
+
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'studiogarnier' ); ?></a>
+	
 
 	<header id="masthead" class="site-header" role="banner">
 		
@@ -58,7 +56,7 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				      </button>
-			          <div class="site-branding">
+                                            <div class="site-branding">
 							<?php
 							if ( is_front_page() && is_home() ) : ?>
 								<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -67,31 +65,33 @@
 							<?php
 							endif;
                                                         ?>
-                                                                <a href="<?php echo bloginfo('wpurl');?>"><img src="http://devgarnier.dareween.fr/wp-content/uploads/2016/08/logo.png" alt="logo"></a>
+                                                                <a href="<?php echo bloginfo('wpurl');?>"><img src="<?php echo bloginfo('wpurl');?>/wp-content/uploads/2016/08/logo.png" alt="logo"></a>
+                                                                 
+                                                                    
 			
-					   </div><!-- .site-branding -->
-			        </div><!--end navbar-header-->
-			        <div class="collapse navbar-collapse menu-primary" id="bs-example-navbar-collapse-1">
-			            <?php
-			            wp_nav_menu( array(
-			                'menu'              => '',
-			                'theme_location'    => 'primary',
-			                'depth'             => 2,
-			                'container'         => '',
-			                'container_class'   => 'collapse navbar-collapse',
-			                'container_id'      => 'bs-example-navbar-collapse-1',
-			                'menu_class'        => 'nav navbar-nav',
-			                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-			                'walker'            => new wp_bootstrap_navwalker())
-			            );
-			            ?>
+                                            </div><!-- .site-branding -->
+                                    </div><!--end navbar-header-->
+                                    <div class="collapse navbar-collapse menu-primary" id="bs-example-navbar-collapse-1">
+                                            <?php
+                                            wp_nav_menu( array(
+                                                'menu'              => '',
+                                                'theme_location'    => 'primary',
+                                                'depth'             => 2,
+                                                'container'         => '',
+                                                'container_class'   => 'collapse navbar-collapse',
+                                                'container_id'      => 'bs-example-navbar-collapse-1',
+                                                'menu_class'        => 'nav navbar-nav',
+                                                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                                                'walker'            => new wp_bootstrap_navwalker())
+                                            );
+                                            ?>
                                     
-                                    <ul class="nav navbar-nav navbar-right">
-                                        <li><a href="https://twitter.com/Garnier_Event"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/twitter-400x300.png" alt="twitter"></a></li>
-                                        <li><a href="#"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/pinterest-400x300.png" alt="pinterest"></a></li>
-                                         <li><a href="https://www.facebook.com/GarnierEvent"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/facebook-400x300.png" alt="facebook"></a></li>
-                                    
-                                    </ul>
+                                            <ul class="nav navbar-nav navbar-right">
+                                                <li><a href="https://twitter.com/Garnier_Event"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/twitter-400x300.png" alt="twitter"></a></li>
+                                                <li><a href="#"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/pinterest-400x300.png" alt="pinterest"></a></li>
+                                                 <li><a href="https://www.facebook.com/GarnierEvent"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/facebook-400x300.png" alt="facebook"></a></li>
+
+                                            </ul>
 			            <!--Module search
 			            <div class="col-sm-3 col-md-3 pull-right search-navbar">
 			                <form class="navbar-form" role="search" method="get" id="searchform" action="<?php bloginfo('home'); ?>" >

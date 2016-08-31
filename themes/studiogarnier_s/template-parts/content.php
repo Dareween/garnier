@@ -8,6 +8,11 @@
  */
 
 ?>
+
+
+
+
+<div class=row">
 <div class='col-md-12'>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     
@@ -19,13 +24,13 @@
 		<?php
                 
 		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1 class="entry-title entry-title-single">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h2 class="entry-title entry-title-single"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;?>
-                
+                <div class=row">
                 <div class="col-md-12 single-date"><hr><time>le <?php the_time("j F Y"); ?></time></div>
-                        
+                </div>       
                         
 		
 	</header><!-- .entry-header -->
@@ -46,11 +51,13 @@
 		?>
                 
              <div class="single-cat-hr"><hr></div>
-                <div class="categories col-md-12">Catégories : 
-                    <span><?php echo get_the_category_list(',','',''); ?><span>
-                </div>
-                <div class="categories col-md-12">Tags :
-                <span><?php echo get_the_tag_list( '', ', ','', $post->ID); ?><span> 
+                <div class="categories-single">
+                    <div class="categories">Catégories : 
+                       <span><?php echo get_the_category_list(',','',''); ?></span>
+                    </div>
+                    <div class="categories">Tags :
+                        <span><?php echo get_the_tag_list( '', ', ','', $post->ID); ?></span> 
+                    </div>
                 </div>
 	</div><!-- .entry-content -->
         <footer class="entry-content">
@@ -59,4 +66,5 @@
 	
     </div>
 </article><!-- #post-## -->
+</div>
 </div>

@@ -6,7 +6,7 @@ Template Name: Prestation
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area page-prestations">
 		<main id="main" class="site-main" role="main">
                         
 			<?php
@@ -14,88 +14,95 @@ get_header(); ?>
 
 				get_template_part( 'template-parts/content', 'page-prestation' );
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-                                
-                                // check if the flexible content field has rows of data
-                    
-            
-             if( have_rows('prestation-1') ):
-                        
+                                ?><div class="lien-ancre-animations" ><a href="#ancre-animations"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/FlecheGrandeRose-01.png" alt="plus d'infos"></a></div>
+                                <div id="ancre-animations"></div>
+                                <?php
+                            if( have_rows('prestation-1') ):
 
-              // loop through the rows of data
-                while ( have_rows('prestation-1') ) : the_row();     
-                                
-                  ?><div class="row prestation col-xs-12"><?php
-                                
-                    if( have_rows('flexible_content_prestation') ):
-                        
-                        
-                    // loop through the rows of data
-                        while ( have_rows('flexible_content_prestation') ) : the_row();
-                            
-                        if( get_row_layout() == 'bloc-image' ):
 
-                        $image = get_sub_field('visuel_de_la_prestation');
+                             // loop through the rows of data
+                               while ( have_rows('prestation-1') ) : the_row();     
 
-				?>
-                                
-				 <div class="col-xs-12 col-md-6 image-prestation element"><img src="<?php echo $image['url']; ?>"  alt="<?php echo $image['alt'] ?>" /></div>
-                                 
-			<?php
+                                ?><div class="row prestation"><?php
 
-                        elseif( get_row_layout() == 'bloc-description' ): 
-                             
-                            ?>
-                               
-                                <div class="col-xs-12 col-md-6 description-prestation element">
-                                <article><h3><?php echo the_sub_field('nom_de_la_prestation'); ?>;</h3>
-                                <p><?php echo the_sub_field('sous_titre_presta'); ?></p>
-                                <p><?php echo the_sub_field('description_de_la_prestation'); ?></p></article>
-                                <a href="<?php echo the_sub_field('url_bouton_prestation'); ?>" class="btn btn-default btn-voir"><?php echo the_sub_field('bouton-voir-prestation'); ?></a>
-                                </div>   
-                               
-                                    <?php
+                                   if( have_rows('flexible_content_prestation') ):
+
+
+                                   // loop through the rows of data
+                                       while ( have_rows('flexible_content_prestation') ) : the_row();
+
+                                            if( get_row_layout() == 'bloc-image' ):
+                                                
+                                                the_field('video'); 
+                                                if( get_sub_field('video') ): ?>
+                                                <div class="col-xs-12 col-md-6 image-prestation element"><div class="embed-container"><?php the_sub_field('video'); ?></div></div>
+                                                <?php
+                                                else:
+                                                $image = get_sub_field('visuel_de_la_prestation');
+                                                ?>
+                                                <div class="col-xs-12 col-md-6 image-prestation element"><img src="<?php echo $image['url']; ?>"  alt="<?php echo $image['alt'] ?>" /></div>
+                                                <?php endif;
+                                            
+                                            
+                                            elseif( get_row_layout() == 'bloc-description' ): 
+                                                ?>
+
+                                               <div class="col-xs-12 col-md-6 description-prestation element">
+                                                   
+                                                   <article><a href="<?php echo the_sub_field('url_bouton_prestation'); ?>" class="h3-animation"><h3><?php echo the_sub_field('nom_de_la_prestation'); ?></h3></a>                                               <p><?php echo the_sub_field('sous_titre_presta'); ?></p>
+                                               <p><?php echo the_sub_field('description_de_la_prestation'); ?></p>
+                                                <a href="<?php echo the_sub_field('url_bouton_prestation'); ?>" class="btn btn-default btn-voir"><?php echo the_sub_field('bouton-voir-prestation'); ?></a>
+                                                   </article>
+                                               
+                                               </div>   
+
+                                                   <?php
                       
 
-                        endif;
+                                            endif;
 
-                    endwhile;
+                                        endwhile;
                     
 
-                    else :
+                                    else :
                         
-                     // no layouts found
+                                    // no layouts found
 
-                    endif;
-                     ?></div><?php
+                                    endif;
+                                    ?></div><?php
                     
-                      endwhile;
+                                endwhile;
 
-                    else :
+                             else :
 
                      // no layouts found
                         
                         
 
-                    endif;
+                            endif;
 
 			endwhile; // End of the loop.
 			?>
                     
-                    <?php
-
+                    <?php if ( get_edit_post_link() ) : ?>
+                            <footer class="entry-footer">
+                                <?php
+				edit_post_link(
+					sprintf(
+						/* translators: %s: Name of current post */
+						esc_html__( 'Edit %s', 'studiogarnier' ),
+						the_title( '<span class="screen-reader-text">"', '"</span>', false )
+					),
+					'<span class="edit-link">',
+					'</span>'
+                                       );
+                                    ?>
+                        </footer><!-- .entry-footer -->
+                        <?php endif; ?>
                     
-
-                    ?>
-                    
-                    
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();
