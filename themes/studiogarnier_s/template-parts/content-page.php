@@ -13,7 +13,7 @@
 	<header class="entry-header entry-header-page container-fluid">
                 
                 <?php the_post_thumbnail( 'full' ); ?>
-		<?php the_title( '<h1 class="entry-title entry-title-page">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title entry-title-page">', '.</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content container">

@@ -26,15 +26,13 @@ get_header(); ?>
                             </div>     
                         </div>
                         <div class="container-fluid">
-                            <div class="row">
-                                <h1 class="titre-home"><?php single_post_title(); ?></h1>
-                            </div>     
+                               
                         </div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
                                     <section class="content-home">
-                                             
+                                        <article>
                                              <?php the_content( sprintf(
                                             /* translators: %s: Name of current post. */
                                             wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'studiogarnier' ), array( 'span' => array( 'class' => array() ) ) ),
@@ -42,6 +40,7 @@ get_header(); ?>
                                                     ) 
                                                 );    
                                             ?>
+                                        </article>
                                     </section>
                                 </div>     
                             </div>
@@ -49,7 +48,7 @@ get_header(); ?>
                     <!-- Insère la liste des liens Evenements avec le widgtet Custom Taxonomy dans la side bar Cat_accueil</div>-->
                             <div class="row">
                                 <div class="col-md-12">
-                                    <section>
+                                    <section class="widget-liens-catégories">
                                         
                                             <?php if ( ! is_active_sidebar( 'sidebar-2' ) ) {
                                              return;
@@ -69,41 +68,56 @@ get_header(); ?>
                         
                         
                             <section class="prestations-home">
+                                    <div class="titre2-home">
+                                        <h2 class="titre-home">Nos prestations</h2>
+                                        <div class="row"><div class="col-xs-5"></div><div class="col-xs-2 trait-qqs-ref"></div><div class="col-xs-5"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row box-liens-relative">
+                                            <div id="myobliqueDiv" class="oblique col-xs-6" >
+                                            </div>
+                                            <div id="myobliqueDiv2" class="oblique col-xs-6">
+                                            </div>
+                                     </div>
+                                    <div class="row" >
+                                            <div class="lien-prestation-home lien-presta-1 col-sm-6 col-md-3"><a href="<?php the_field('lien-prestation-1'); ?>"><?php the_field('titre-lien-1'); ?></a></div>
+                                            <div class="lien-prestation-home lien-presta-2 col-sm-6 col-md-3"><a href="<?php the_field('lien-prestation-2'); ?>"><?php the_field('titre-lien-2'); ?></a></div>
+                                            <div class="lien-prestation-home lien-presta-3 col-sm-6 col-md-3"><a href="<?php the_field('lien-prestation-3'); ?>"><?php the_field('titre-lien-3'); ?></a></div>
+                                            <div class="lien-prestation-home lien-presta-4 col-sm-6 col-md-3"><a href="<?php the_field('lien-prestation-4'); ?>"><?php the_field('titre-lien-4'); ?></a></div>
+                                    </div>
                                 
-                                 <div class="row box-liens-relative">
-                                    <div id="myobliqueDiv" class="oblique col-xs-6" >
-                                    
-                                    </div>
-                                    <div id="myobliqueDiv2" class="oblique col-xs-6">
-                                   
-                                    </div>
-                                    <div class="lien-prestation-home lien-presta-1 col-sm-6 col-md-3"><a href="<?php the_field('lien-prestation-1'); ?>"><?php the_field('titre-lien-1'); ?></a></div>
-                                    <div class="lien-prestation-home lien-presta-2 col-sm-6 col-md-3"><a href="<?php the_field('lien-prestation-2'); ?>"><?php the_field('titre-lien-2'); ?></a></div>
-                                    <div class="lien-prestation-home lien-presta-3 col-sm-6 col-md-3"><a href="<?php the_field('lien-prestation-3'); ?>"><?php the_field('titre-lien-3'); ?></a></div>
-                                    <div class="lien-prestation-home lien-presta-4 col-sm-6 col-md-3"><a href="<?php the_field('lien-prestation-4'); ?>"><?php the_field('titre-lien-4'); ?></a></div>
-                                     
-                                 </div>
+                                 
                                 <div class="row">
                                     <div class="fond-gris"></div>
                                     
                                 </div>
                             </section>
                             <section class="quelques-references">  
-                                    <h3 class="titre-home">Quelques références</h3>
-                                    <div class="row"><div class="col-xs-4"></div><div class="col-xs-4 trait-qqs-ref"></div><div class="col-xs-4"></div>
-                                    </div>
+                                   <div class="titre2-home"> 
+                                        <h2 class="titre-home"><a href="http://devgarnier.dareween.fr/fr/references/">Nos références</a></h2>
+                                    
+                                         <div class="row"><div class="col-xs-5"></div><div class="col-xs-2 trait-qqs-ref"></div><div class="col-xs-5"></div>
+                                         </div>
+                                   </div>
                                     <section class="section-vignettes">
-                                    <div class="row vignettes-ref-home">
-                                        <?php $loop = new WP_Query( array( 'post_type' => 'reference', 'posts_per_page' => '8' ) ); ?>
-                                        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                                         <div class="col-md-3 vignette">
-                                            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                                                <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'full' ) ?></a>
+                                        <div class="row vignettes-ref-home">
+                                            <?php $loop = new WP_Query( array( 'post_type' => 'reference', 'posts_per_page' => '8' ) ); ?>
+                                            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                                             <div class="col-xs-6 col-sm-6 col-md-3 vignette">
+                                                <a href="<?php the_permalink() ?>"><article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                                                    <div class="thumbnail-reference-home"><div class="thumbnail-bg"><?php the_post_thumbnail( 'thumbnail' ) ?></div></div>
+                                                    <div class="thumbnail-text"><h5><?php the_title() ?></h5>
+                                                        
+                                                        <div class="liens-taxo-thumbnail"><?php echo get_the_term_list( $post->ID, 'animations', '', ', ', ',' ); ?>
+                                                        <?php echo get_the_term_list( $post->ID, 'evenements', '', ', ', ',' ); ?>
+                                                       <?php echo get_the_term_list( $post->ID, 'prestations', '', ', ', '' ); ?></div>
+                                                    </div>
 
-                                            </article><!-- #post-## -->
-                                         </div><!-- .vignette -->
-                                        <?php endwhile; wp_reset_query(); ?>
-                                    </div>
+                                                </article><!-- #post-## -->
+                                                </a>
+                                             </div><!-- .vignette -->
+                                            <?php endwhile; wp_reset_query(); ?>
+                                        </div>
                                     </section>    
                                   
                                     
@@ -111,15 +125,19 @@ get_header(); ?>
                              <section class="partenaires">
                                  <div class="row">
                                       <div class="col-md-12 partenaires-ref-home">
+                                          <div class="row">
                                         <?php $loop = new WP_Query( array( 'post_type' => 'partenaires', 'posts_per_page' => '6' ) ); ?>
                                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                                     <div class="col-xs-6 partenaire">
+                                     
+                                          <div class="col-xs-6 col-sm-4 col-md-2 partenaire">
                                     
-                                    <a href="<?php the_field('lien'); ?>">
+                                            <a href="<?php the_field('lien'); ?>">
                                             <img title="logo" onmouseover="this.src='<?php the_field('logo-survol'); ?>'" onmouseout="this.src='<?php the_field('logo'); ?>'" src="<?php the_field('logo'); ?>" alt="Logo" width="100" height="100" /></a>
                 
-                                    </div><!-- .vignette -->
+                                        </div><!-- .vignette -->
+                                     
                                     <?php endwhile; wp_reset_query(); ?>
+                                        </div>
                                     </div>
                                      
                                  </div>
@@ -132,14 +150,14 @@ get_header(); ?>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="nombre  circle">115</div>
-                                    <div class="suite-nombre">événements par an</div>
+                                    <div class="suite-nombre">moments inoubliables par an </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="nombre  circle">8</div>
-                                    <div class="suite-nombre">collaborateurs motivés</div>
+                                    <div class="suite-nombre">collaborateurs sur le pont </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <div class="nombre  circle">37</div>
+                                    <div class="nombre  circle">18</div>
                                     <div class="suite-nombre">ans d'expérience</div>
                                 </div>
                         </section>

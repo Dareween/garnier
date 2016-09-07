@@ -326,9 +326,7 @@ h1.entry-title{
     width:50%;
 }
 
-.lien-presta-1{
-    margin-top:60px;
-}
+
 
 .box-liens-relative{
     background-color: #e3e0dd;
@@ -369,8 +367,9 @@ description.prestation{
 }
     
 .description-prestation article {
-    width: 70%;
+    width: 100%;
 }
+   
 
 .prestation:nth-child(2n+1)>.element:nth-child(2)>article {
    float:right;
@@ -632,13 +631,71 @@ div.single-cat-hr > hr{
                             Page Accueil
 --------------------------------------------------------------*/
 
+.carousel-inner>.item{
+    height:600px;
+}
+
+
+.carousel-indicators{
+    text-align: left;
+}
+
+
+
+h2{
+    margin-top: 80px;
+}
+
+
+.glyphicon-chevron-left::before, .glyphicon-chevron-right::before{
+     display:none;
+}
+
+.glyphicon-chevron-left::before{
+     background-image: url(/wp-includes/images/studiogarnier/fleche-bouton-voir-01.png);
+     
+}
+
+.carousel-indicators li{
+    
+        border: 1px solid #ff007a;
+    
+}
+
+
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    /* margin: 0; */
+    background-color: #ff007a;
+}
+
+
+.carousel-caption p{
+    font-size: 120px;
+    text-align: left;
+    font-weight: 700;
+        text-shadow: none;
+        line-height: 120px;
+        width: 80%;
+        position:absolute;
+        bottom:150px;
+        left:0%
+    
+}
+
+.carousel-caption a{
+    margin: 20px 0 60px 0;
+    color:#fff;
+}
+
 
 /*--------- Liste catégories animations ----------------------*/
 
 #sgr-custom-taxonomies-menu-3, #sgr-custom-taxonomies-menu-4 {
     width:50%;
     display: inline-block;
-    margin:60px 0 80px 0;
+    /*margin:60px 0 80px 0;*/
     padding: 0;
     
 }
@@ -649,23 +706,47 @@ text-transform: capitalize;
 }
 
 #sgr-custom-taxonomies-menu-3 li a, #sgr-custom-taxonomies-menu-4 li a{
- color: #111;
-}
-
-#sgr-custom-taxonomies-menu-3 li a:hover, #sgr-custom-taxonomies-menu-4 li a:hover{
  color: #ff007a;
 }
 
-#sgr-custom-taxonomies-menu-3 {
-    padding: 15px 0 0 300px;
+#sgr-custom-taxonomies-menu-3 li a:hover, #sgr-custom-taxonomies-menu-4 li a:hover{
+ color: #000;
 }
 
-#sgr-custom-taxonomies-menu-4 {
+
+#sgr-custom-taxonomies-menu-4>ul {
     border-left: #ff007a solid;
-    padding: 15px 0 0 30px;
+    padding:0;
+    
+}
+
+.widget-liens-catégories>section:nth-child(1){
+    text-align: right;
+    padding : 40px;
+}
+
+.widget-liens-catégories>section:nth-child(2){
+    
+    text-align: left;
+     padding : 40px;
+}
+
+.widget-liens-catégories>section:nth-child(1) li{
+     padding-right : 80px;
 }
 
 
+.widget-liens-catégories>section:nth-child(2) li{
+     padding-left : 80px;
+}
+
+.widget-liens-catégories{
+    margin : 80px 0 80px 0;
+}
+
+.widget-liens-catégories>section a{
+    text-decoration: none;
+}
 
 
 /*--------- Contenu Home ----------------------*/
@@ -689,6 +770,11 @@ h1.titre-home{
 }
 
   
+.content-home article{
+    padding : 20px 10px 15px 20px;
+}
+
+
 
 /*--------- Liens vers pages Prestations ----------------------*/
 
@@ -747,16 +833,23 @@ h1.titre-home{
     
 } 
 
-
+.lien-presta-1>a, .lien-presta-2>a, .lien-presta-3>a, .lien-presta-4>a{
+    text-decoration: none;
+    color: #ff007a;
+}
+.lien-presta-1>a:hover, .lien-presta-2>a:hover, .lien-presta-3>a:hover, .lien-presta-4>a:hover{
+    text-decoration: none;
+    color: #fff;
+}
   
 .lien-presta-2{
-    border-left: 2px solid #ff007a;
+    border-left: 3px solid #ff007a;
     
 }
 
 .lien-presta-3{
     border-left: 3px solid #ff007a;
-    border-right: 2px solid #ff007a;
+    border-right: 3px solid #ff007a;
     
 }
 
@@ -766,7 +859,9 @@ h1.titre-home{
 }
 
 
-h3.titre-home{
+
+/*--------- Titres H2 ----------------------*/
+h2.titre-home{
     font-size: 60px;
     text-align: center;
     margin-left: auto;
@@ -775,22 +870,113 @@ h3.titre-home{
     margin-bottom:40px;
 }
 
+
+
 .trait-qqs-ref{
     height:40px;
     border-top: 4px solid #000;
    
 }
 
+/*--------- Nos prestations ----------------------*/
 
 
-.quelques-references img{
-    padding:5px 5px 5px 5px;
+section.quelques-references h2 a{
+    text-decoration: none;
+    color:#000;
+    
+}
+
+section.quelques-references h2 a:actif, section.quelques-references h2 a:visited{
+    text-decoration: none;
+    color:#000;
+    
+}
+
+section.quelques-references h2 a:hover{
+    text-decoration: none;
+    color:#ff007a;
+    
+}
+
+.titre2-home{
+    margin-bottom: 50px;
 }
 
 
 
+.vignette article{
+    margin:  5px 5px 5px 5px;
+}
+
+
+
+.thumbnail-reference-home img{
+    position: relative;
+     opacity : 1;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+    transition: opacity .5s ease-in;
+    -moz-transition: opacity .5s ease-in;
+    -webkit-transition: opacity .5s ease-in;
+    -o-transition: opacity .5s ease-in;
+}
+
+.thumbnail-text{
+    position: absolute;
+    text-align: center;
+     top: 0%;
+    left: 0%;
+    color: #fff;
+       opacity : 0;
+     transition: opacity .5s ease-in;
+    -moz-transition: opacity .5s ease-in;
+    -webkit-transition: opacity .5s ease-in;
+    -o-transition: opacity .5s ease-in;
+      transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+    
+   
+    width: 100%;
+   height:100%;
+   
+}
+
+
+.thumbnail-reference-home img:hover{
+     opacity : 0;
+}
+
+.thumbnail-text:hover{
+    opacity : 1;
+    background-color:#ff007a; 
+}
+
+.thumbnail-text a{
+    color:#fff;
+    text-decoration: none;
+    
+}
+
+.thumbnail-text h5{
+    padding: 25px 5px 0px 0;
+    font-size: 25px;
+    margin:0;
+}
+
+.liens-taxo-thumbnail{
+    padding: 10px;
+    font-size: 15px;
+}
+
+
 .logo-partenaire a {
 	display: inline-block;
+        vertical-align: middle;
 }
 
 .partenaires{
@@ -799,7 +985,6 @@ h3.titre-home{
     padding-bottom: 50px;
     
 }
-
 
 
 .vignettes-ref-home{
@@ -817,8 +1002,7 @@ section-vignettes{
     margin-top:30px;
     margin-bottom:30px;
     display: inline-block;
-    width:16.33%;
-    height: 15%;
+    
     text-align: center;
     margin-right: auto;
     margin-left: auto;
@@ -902,11 +1086,6 @@ section-vignettes{
     margin-top: 2px
 
 }
-
-
-
-
-
 
 
 /*--------------------------------------------------------------
@@ -998,10 +1177,74 @@ section-vignettes{
         top:10px;
     }
     
+    .site-branding img{
+        max-width:50%
+    }
+
+/*--------------------------------------------------------------
+                            Page Accueil
+--------------------------------------------------------------*/
+
+
+.content-home p{
+    padding: 0 5px 0 5px;
+}
     
+#sgr-custom-taxonomies-menu-4>ul, #sgr-custom-taxonomies-menu-3>ul {
+    border: none;
+    padding:0;
+    text-align: center;
+    
+}
+
+.widget-liens-catégories>section:nth-child(1){
+    text-align: left;
+    padding : 40px;
+}
+
+.widget-liens-catégories>section:nth-child(2){
+    
+    text-align: left;
+     padding : 40px;
+}
+
+.widget-liens-catégories>section:nth-child(1) li, .widget-liens-catégories>section:nth-child(2) li{
+     padding: 10px 30px;
+     
+}
+
+#sgr-custom-taxonomies-menu-4, #sgr-custom-taxonomies-menu-3{
+    width:100%;
+}
+
+.fond-gris{
+    height: 0px;
+}
+
+
+.thumbnail-text h5 {
+    padding: 30px 15px 10px 15px;
+    font-size: 22px;
+    margin: 0;
+}
+/*--------------------------------------------------------------
+                            Page Equipe
+--------------------------------------------------------------*/
+
+.gallery-item{
+      display: inline-block;
+      float:left;
+      width:50%;
+      padding:1%;
+
+}
+
+
 /*--------------------------------------------------------------
                             Page Prestation
 --------------------------------------------------------------*/
+
+
 
 
 .entry-content-page-prestation {
@@ -1031,9 +1274,7 @@ section-vignettes{
     width:100%;
 }
 
-.lien-presta-1{
-    margin-top:60px;
-}
+
 
 .box-liens-relative{
     background-color: #e3e0dd;
@@ -1055,21 +1296,7 @@ section-vignettes{
 
 
 
-/*--------------------------------------------------------------
-                            Page Equipe
---------------------------------------------------------------*/
 
-.gallery-item{
-      display: inline-block;
-      float:left;
-      width:50%;
-      padding:1%;
-
-}
-
-/*--------------------------------------------------------------
-                            Page Prestation
---------------------------------------------------------------*/
 
 .prestation:nth-child(2n+1){
    
@@ -1120,6 +1347,15 @@ section-vignettes{
    
 
 }
+.carousel-caption p{
+    font-size: 60px;
+ 
+}
+
+.carousel-inner>.item{
+    height:280px;
+}
+
 
 
 }
@@ -1178,7 +1414,15 @@ section-vignettes{
     margin-bottom:150px;
 }
     
+.carousel-caption p{
+    font-size: 80px;
+ 
+}
 
+.carousel-inner>.item{
+    height:500px;
+}
+  
 
 }
 
@@ -1192,17 +1436,28 @@ section-vignettes{
     float: left;
 }
 
-.description-prestation.element > article > a.btn.btn-default.btn-voir{
-   
-    margin-bottom:150px;
-    
+.carousel-caption p{
+    font-size: 100px;
+ 
 }
-    
-    
 }
 
 
 
 @media (min-width: 1200px) {
+   
+    .description-prestation article {
+    width: 70%;
+}
+
+
+.lien-prestation-home a{
+    display: inline-block;
+    width:75%;
+}
+   
+.carousel-inner>.item{
+    height:700px;
+}
     
 }

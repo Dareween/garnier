@@ -22,7 +22,7 @@ if ( ! function_exists( 'studiogarnier_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function studiogarnier_setup() {
-	/*
+	/*UzfIhCZ24G0AAAAAAAARopOGRwwPpTqTx-HcmZGMYYc
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on studiogarnier, use a find and replace
@@ -47,6 +47,9 @@ function studiogarnier_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+        
+        add_image_size( 'medium-750', 750, 500, true ); 
+        add_image_size( 'medium-990', 990, 500, true ); 
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -201,7 +204,11 @@ require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 }
 
 
+/**
+ * Ajout de nouveaux post-types'
+ */
 
+function add_post_type(){
 	register_post_type(
 			   'reference',
 			      array(
@@ -316,8 +323,13 @@ register_post_type(
 			           )
                 );
 
- 
+}
 
+add_action( 'init', 'add_post_type' );
+
+
+
+function add_taxonomy(){
   register_taxonomy(   
 		'prestations',  
                 'reference',
@@ -383,4 +395,6 @@ register_taxonomy(
 			'hierarchical' => true   
 			) 
 		); 
+}
 
+add_action( 'init', 'add_taxonomy' );

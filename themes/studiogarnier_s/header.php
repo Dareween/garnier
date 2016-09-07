@@ -58,7 +58,7 @@
 				      </button>
                                             <div class="site-branding">
 							<?php
-							if ( is_front_page() && is_home() ) : ?>
+							if ( is_front_page() OR is_home() ) : ?>
 								<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 							<?php else : ?>
 								<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
@@ -85,13 +85,14 @@
                                                 'walker'            => new wp_bootstrap_navwalker())
                                             );
                                             ?>
-                                    
-                                            <ul class="nav navbar-nav navbar-right">
+                                        <div class="hidden-xs hidden-sm">
+                                            <ul class="nav navbar-nav navbar-right ">
                                                 <li><a href="https://twitter.com/Garnier_Event"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/twitter-400x300.png" alt="twitter"></a></li>
                                                 <li><a href="#"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/pinterest-400x300.png" alt="pinterest"></a></li>
                                                  <li><a href="https://www.facebook.com/GarnierEvent"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/facebook-400x300.png" alt="facebook"></a></li>
 
                                             </ul>
+                                        </div>
 			            <!--Module search
 			            <div class="col-sm-3 col-md-3 pull-right search-navbar">
 			                <form class="navbar-form" role="search" method="get" id="searchform" action="<?php bloginfo('home'); ?>" >
