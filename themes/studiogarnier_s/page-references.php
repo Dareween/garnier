@@ -13,10 +13,10 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) : ?>
                        
-			<div class="page-header header-taxonomy">
+			<!--<div class="page-header header-taxonomy">
                             <h1 class="page-title">Nos références</h1><br><hr>
 					
-			</div><!-- .page-header -->
+			</div>.page-header -->
                         <section class="boucle-references">
 			 
                                                             <?php $loop = new WP_Query( array( 'post_type' => 'reference', 'posts_per_page' => '22' ) ); ?>

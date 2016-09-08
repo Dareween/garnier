@@ -19,7 +19,7 @@
             <div class="row">
                 <div class='col-md-12 logo-footer footer1'>
                     
-                    <div class='col-md-5'>
+                    <div class='col-md-4'>
                     <img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/LogoGARNIER-STUDIOS_blanc-900.png" alt="logo Garnier Studios ">
                     
                     </div>

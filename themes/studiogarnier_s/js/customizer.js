@@ -40,3 +40,19 @@
 		} );
 	} );
 } )( jQuery );
+
+
+//document.getElementsByTagName('a').addListener("click", myFunction);
+
+/*function myFunction() {
+    console.log('test');
+}
+*/
+
+$("#lien-references").on("click", function(){
+	$("#references").slideUp();
+	
+});
+
+//var a = document.getElementById('lien-references');
+//console.log(a);

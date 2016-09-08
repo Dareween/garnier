@@ -92,7 +92,7 @@ img{
 /*-------------------------  Navbar ----------------------------*/
 
 .navbar{
-    padding: 30px 60px 5px 45px;
+    padding: 30px 60px 15px 45px;
 }
 
 .navbar-nav a {
@@ -133,7 +133,8 @@ img{
 
 .navbar-default {
     background-color: rgba(255, 255, 255, 0.95);
-    border-color: gba(255, 255, 255, 0.95);
+    /*border-color: gba(255, 255, 255, 0.95);*/
+    border:none;
 }
 
 
@@ -194,7 +195,8 @@ nav ul a img{
 }
 
 .footer2-1{
-    padding-right: 90px;
+    padding-right: 100px;
+    padding-left: 0px;
 }
 
 
@@ -1116,7 +1118,7 @@ section-vignettes{
     padding: 0.2%;
 }
 .page-taxonomy aside{
-    padding-top: 120px;
+    /*padding-top: 120px;*/
     padding-left: 4%;
 }
 
@@ -1459,5 +1461,16 @@ section-vignettes{
 .carousel-inner>.item{
     height:700px;
 }
+
+
+.content-home p{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 120px 0 120px;
+    
+}
+
+
     
 }

@@ -1,7 +1,7 @@
 
 <?php
 /*
-Template Name: Accueil
+Template Name: Accueil-test
 */
 
 get_header(); ?>
@@ -93,8 +93,8 @@ get_header(); ?>
                                 </div>
                             </section>
                             <section class="quelques-references">  
-                                   <div class="titre2-home"> 
-                                        <h2 class="titre-home"><a href="http://devgarnier.dareween.fr/fr/references/">Nos références</a></h2>
+                                   <div id="titre-references" class="titre2-home"> 
+                                        <h2 class="titre-home"><a id="lien-references" href="http://devgarnier.dareween.fr/fr/references/">Nos références</a></h2>
                                     
                                          <div class="row"><div class="col-xs-5"></div><div class="col-xs-2 trait-qqs-ref"></div><div class="col-xs-5"></div>
                                          </div>
@@ -105,7 +105,7 @@ get_header(); ?>
                                             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                                              <div class="col-xs-6 col-sm-6 col-md-3 vignette">
                                                 <a href="<?php the_permalink() ?>"><article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                                                    <div class="thumbnail-reference-home"><div class="thumbnail-bg"><?php the_post_thumbnail( 'full' ) ?></div></div>
+                                                    <div class="thumbnail-reference-home"><div class="thumbnail-bg"><?php the_post_thumbnail( 'thumbnail' ) ?></div></div>
                                                     <div class="thumbnail-text"><h5><?php the_title() ?></h5>
                                                         
                                                         <div class="liens-taxo-thumbnail"><?php echo get_the_term_list( $post->ID, 'animations', '', ', ', ',' ); ?>
@@ -120,8 +120,7 @@ get_header(); ?>
                                         </div>
                                     </section>    
                                   
-                                  </div><!-- fin container-->
-                          <div class="container-fluid">
+                                    
                              </section>
                              <section class="partenaires">
                                  <div class="row">
@@ -163,7 +162,7 @@ get_header(); ?>
                                 </div>
                         </section>
                         
-                        </div>
+                       </div><!-- fin container-->
                             <?php
 
                         else :

@@ -47,7 +47,7 @@
 		</nav>-->
                 
                 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-			    <div class="container-fluid">
+			    <div class="container">
                               <!-- Brand and toggle get grouped for better mobile display -->
 				    <div class="navbar-header">
 				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -85,7 +85,7 @@
                                                 'walker'            => new wp_bootstrap_navwalker())
                                             );
                                             ?>
-                                        <div class="hidden-xs hidden-sm">
+                                        <div class="hidden-xs hidden-sm social-links-menu">
                                             <ul class="nav navbar-nav navbar-right ">
                                                 <li><a href="https://twitter.com/Garnier_Event"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/twitter-400x300.png" alt="twitter"></a></li>
                                                 <li><a href="#"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/pinterest-400x300.png" alt="pinterest"></a></li>
