@@ -92,7 +92,7 @@ img{
 /*-------------------------  Navbar ----------------------------*/
 
 .navbar{
-    padding: 30px 60px 15px 45px;
+    padding: 30px 60px 15px 0px;
 }
 
 .navbar-nav a {
@@ -102,7 +102,7 @@ img{
 }
 
 .navbar-nav>li>a {
-    padding: 13px 10px 13px 10px;
+    padding: 13px 0px 13px 20px;
     
 }
 
@@ -137,6 +137,24 @@ img{
     border:none;
 }
 
+
+.navbar-nav>li>.dropdown-menu {
+    margin-top: 0;
+    border : none;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 0px 0px rgba(0,0,0,0);
+    box-shadow: 0 0px 0px rgba(0,0,0,0);
+}
+
+.dropdown-menu li a {
+    pading: 0px;
+}
+
+
+#menu-menu-principal{
+    padding-left: 20px;
+    
+}
 
 /* ------------------------- Logo ---------------------------- */
 
@@ -907,8 +925,8 @@ section.quelques-references h2 a:hover{
 
 
 
-.vignette article{
-    margin:  5px 5px 5px 5px;
+.vignette article, .vignettes-ref-home{
+    margin:  2%;
 }
 
 
@@ -948,8 +966,13 @@ section.quelques-references h2 a:hover{
    
 }
 
+.section-vignettes{
+    padding : 10px 0px 10px 0px;
+}
 
-.thumbnail-reference-home img:hover{
+
+
+vignette .thumbnail-reference-home img:hover{
      opacity : 0;
 }
 
@@ -989,15 +1012,20 @@ section.quelques-references h2 a:hover{
 }
 
 
-.vignettes-ref-home{
+/*.vignettes-ref-home{
     margin: 5px;
     margin-right: auto;
     margin-left: auto;
     width: 100%
-}
+}*/
 
 section-vignettes{
     background-color: #fff;
+}
+
+.vignette{
+    width: 25%;
+    float: left;
 }
 
 .partenaire{
@@ -1446,7 +1474,8 @@ section-vignettes{
 
 
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1400px) 
+ {
    
     .description-prestation article {
     width: 70%;
@@ -1471,6 +1500,16 @@ section-vignettes{
     
 }
 
+
+
+    
+}
+
+@media (min-width: 1400px){
+    
+    .section-vignettes{
+    padding : 10px 250px 10px 250px;
+}
 
     
 }
