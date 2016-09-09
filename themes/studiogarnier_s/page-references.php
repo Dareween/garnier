@@ -19,7 +19,7 @@ get_header(); ?>
 			</div><!-- .page-header -->
                         <section class="boucle-references">
 			 
-                                                            <?php $loop = new WP_Query( array( 'post_type' => 'reference', 'posts_per_page' => '22' ) ); ?>
+                                           <?php $loop = new WP_Query( array( 'post_type' => 'reference', 'posts_per_page' => '22' ) ); ?>
                                             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                                              <div class="col-xs-12 col-sm-6 col-md-6 vignette">
                                                 <a href="<?php the_permalink() ?>"><article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

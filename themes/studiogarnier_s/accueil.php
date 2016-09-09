@@ -20,14 +20,14 @@ get_header(); ?>
 
                         <div class="container-fluid">
                             <div class="row">
-                                <header>
-                                <?php echo do_shortcode('[image-carousel]'); ?> 
-                                </header> 
+                                
+                                <header class="entry-header entry-header-page">
+                                <?php the_post_thumbnail( 'full' ); ?>
+                                <?php the_title( '<h1 class="entry-title entry-title-page">', '.</h1>' ); ?>
+                                </header><!-- .entry-header -->
                             </div>     
                         </div>
-                        <div class="container-fluid">
-                               
-                        </div>
+                        
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
@@ -61,38 +61,32 @@ get_header(); ?>
                                 </div>
                             </div>
                         </div> <!-- fin container-->
-                            
-                    <div class="container-fluid">
-                       
-                        
-                        
-                        
-                            <section class="prestations-home">
-                                    <div class="titre2-home">
-                                        <h2 class="titre-home">Nos prestations</h2>
-                                        <div class="row"><div class="col-xs-5"></div><div class="col-xs-2 trait-qqs-ref"></div><div class="col-xs-5"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row box-liens-relative">
-                                            <div id="myobliqueDiv" class="oblique col-xs-6" >
-                                            </div>
-                                            <div id="myobliqueDiv2" class="oblique col-xs-6">
-                                            </div>
-                                     </div>
-                                    <div class="row" >
+                           <div class="container-fluid">
+                            <div class="row">
+                                
+                                  
+                                  <img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/obliques-roses.png">
+                           
+                                    
                                             <div class="lien-prestation-home lien-presta-1 col-sm-6 col-md-3"><a href="<?php the_field('lien-prestation-1'); ?>"><?php the_field('titre-lien-1'); ?></a></div>
                                             <div class="lien-prestation-home lien-presta-2 col-sm-6 col-md-3"><a href="<?php the_field('lien-prestation-2'); ?>"><?php the_field('titre-lien-2'); ?></a></div>
                                             <div class="lien-prestation-home lien-presta-3 col-sm-6 col-md-3"><a href="<?php the_field('lien-prestation-3'); ?>"><?php the_field('titre-lien-3'); ?></a></div>
                                             <div class="lien-prestation-home lien-presta-4 col-sm-6 col-md-3"><a href="<?php the_field('lien-prestation-4'); ?>"><?php the_field('titre-lien-4'); ?></a></div>
-                                    </div>
+                                   
                                 
                                  
-                                <div class="row">
-                                    <div class="fond-gris"></div>
+                                
+                                    <div class="fond-gris col-sm-12"></div>
                                     
-                                </div>
-                            </section>
-                            <section class="quelques-references">  
+                               
+                            
+                            </div>     
+                        </div> 
+                    <div class="container-fluid">
+                       
+                       
+                          
+                           <section class="quelques-references">  
                                    <div class="titre2-home"> 
                                         <h2 class="titre-home"><a href="http://devgarnier.dareween.fr/fr/references/">Nos références</a></h2>
                                     

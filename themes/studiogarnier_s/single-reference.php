@@ -25,9 +25,9 @@ get_header(); ?>
                    
 			get_template_part( 'template-parts/content-reference', get_post_format() );
                         
-                        the_post_navigation();
+                        /*the_post_navigation();
                         previous_post_link('%link','<i class="fa fa-chevron-left"></i><span class="label hidden-mobile">Précédent</span>', TRUE, ' ', '' );
-                        next_post_link( '%link', '<span class="label hidden-mobile">Suivant</span><i class="fa fa-chevron-right"></i>', TRUE, ' ', ''  );
+                        next_post_link( '%link', '<span class="label hidden-mobile">Suivant</span><i class="fa fa-chevron-right"></i>', TRUE, ' ', ''  );*/
                                                     
 			
                         

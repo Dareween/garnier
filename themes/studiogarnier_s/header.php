@@ -46,8 +46,8 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav>-->
                 
-                <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-			    <div class="container-fluid">
+                <nav class="navbar navbar-default navbar-fixed-top navbar-header" role="navigation">
+			    <div class="container container-navbar">
                               <!-- Brand and toggle get grouped for better mobile display -->
 				    <div class="navbar-header">
 				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -56,6 +56,7 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				      </button>
+                                        
                                             <div class="site-branding">
 							<?php
 							if ( is_front_page() OR is_home() ) : ?>
@@ -70,8 +71,10 @@
                                                                     
 			
                                             </div><!-- .site-branding -->
+                                           
+                                            
                                     </div><!--end navbar-header-->
-                                    <div class="collapse navbar-collapse menu-primary" id="bs-example-navbar-collapse-1">
+                                    <div class="collapse navbar-collapse menu-primary" id="navbar-collapse-1">
                                             <?php
                                             wp_nav_menu( array(
                                                 'menu'              => '',
@@ -85,11 +88,11 @@
                                                 'walker'            => new wp_bootstrap_navwalker())
                                             );
                                             ?>
-                                        <div class="hidden-xs hidden-sm">
+                                        <div class="hidden-xs hidden-sm social-links-menu">
                                             <ul class="nav navbar-nav navbar-right ">
-                                                <li><a href="https://twitter.com/Garnier_Event"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/twitter-400x300.png" alt="twitter"></a></li>
-                                                <li><a href="#"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/pinterest-400x300.png" alt="pinterest"></a></li>
-                                                 <li><a href="https://www.facebook.com/GarnierEvent"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/facebook-400x300.png" alt="facebook"></a></li>
+                                                <li><a href="https://twitter.com/Garnier_Event"><img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/twitter-400x300.png" alt="twitter"></a></li>
+                                                <li><a href="#"><img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/pinterest-400x300.png" alt="pinterest"></a></li>
+                                                 <li><a href="https://www.facebook.com/GarnierEvent"><img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/facebook-400x300.png" alt="facebook"></a></li>
 
                                             </ul>
                                         </div>

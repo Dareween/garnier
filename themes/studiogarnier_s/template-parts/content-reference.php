@@ -51,7 +51,7 @@
                 
                 
                 
-                <div class="categories">Catégories : </div>
+                <div class="categories">Tags : </div>
                  <span class="meta-post">
                 <?php echo get_the_term_list( $post->ID, 'animations', '', ', ', ',' ); ?>
                  
