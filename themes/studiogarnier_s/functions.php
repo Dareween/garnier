@@ -73,6 +73,18 @@ function studiogarnier_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+        
+        
+      
+	
+	add_theme_support( 'custom-logo', array(
+		'height'      => 30,
+		'width'       => 263,
+		
+	) );
+
+
+        
 }
 endif;
 add_action( 'after_setup_theme', 'studiogarnier_setup' );
@@ -153,6 +165,21 @@ function studiogarnier_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'studiogarnier_scripts' );
+
+
+
+/**
+ * Enqueue google font Droid sans 400 / 700.
+ */
+function wpb_add_google_fonts() {
+
+wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Droid+Sans:400,700', false ); 
+}
+
+add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+
+
+
 
 /**
  * Implement the Custom Header feature.
@@ -398,3 +425,5 @@ register_taxonomy(
 }
 
 add_action( 'init', 'add_taxonomy' );
+
+

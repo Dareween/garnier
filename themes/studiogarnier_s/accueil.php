@@ -22,11 +22,22 @@ get_header(); ?>
                             <div class="row">
                                 
                                 <header class="entry-header entry-header-page">
-                                <?php the_post_thumbnail( 'full' ); ?>
-                                <?php the_title( '<h1 class="entry-title entry-title-page">', '.</h1>' ); ?>
+                                <?php if ( get_header_image() ) : ?>
+                                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                                      <img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+                                     
+                                      <?php
+                                      $image_url = header_image();
+                                      
+                                      ?>
+                                      
+                                          
+                            </a>
+                        <?php endif; // End header image check. ?>
                                 </header><!-- .entry-header -->
                             </div>     
                         </div>
+                        
                         
                         <div class="container">
                             <div class="row">
@@ -65,7 +76,7 @@ get_header(); ?>
                             <div class="row">
                                 
                                   
-                                  <img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/obliques-roses.png">
+                                  <img id="forme-oblique" src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/obliques-roses.png">
                            
                                     
                                             <div class="lien-prestation-home lien-presta-1 col-sm-6 col-md-3"><a href="<?php the_field('lien-prestation-1'); ?>"><?php the_field('titre-lien-1'); ?></a></div>
@@ -98,8 +109,9 @@ get_header(); ?>
                                             <?php $loop = new WP_Query( array( 'post_type' => 'reference', 'posts_per_page' => '8' ) ); ?>
                                             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                                              <div class="col-xs-6 col-sm-6 col-md-3 vignette">
+                                                 
                                                 <a href="<?php the_permalink() ?>"><article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                                                    <div class="thumbnail-reference-home"><div class="thumbnail-bg"><?php the_post_thumbnail( 'thumbnail' ) ?></div></div>
+                                                    <div class="thumbnail-reference-home"><div class="thumbnail-bg"><?php the_post_thumbnail( 'medium-750' ) ?></div></div>
                                                     <div class="thumbnail-text"><h5><?php the_title() ?></h5>
                                                         
                                                         <div class="liens-taxo-thumbnail"><?php echo get_the_term_list( $post->ID, 'animations', '', ', ', ',' ); ?>
@@ -109,6 +121,7 @@ get_header(); ?>
 
                                                 </article><!-- #post-## -->
                                                 </a>
+                                                
                                              </div><!-- .vignette -->
                                             <?php endwhile; wp_reset_query(); ?>
                                         </div>

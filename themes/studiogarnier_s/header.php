@@ -58,15 +58,19 @@
 				      </button>
                                         
                                             <div class="site-branding">
-							<?php
-							if ( is_front_page() OR is_home() ) : ?>
+                                                
+                                         
+							<?php if (is_front_page() && is_home() || is_front_page() ): ?>
 								<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 							<?php else : ?>
 								<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 							<?php
 							endif;
-                                                        ?>
-                                                                <a href="<?php echo bloginfo('wpurl');?>"><img src="<?php echo bloginfo('wpurl');?>/wp-content/uploads/2016/08/logo.png" alt="logo"></a>
+                                                       
+                                                        if ( function_exists( 'the_custom_logo' ) ) {
+                                                        the_custom_logo();
+                                                        } ?>
+                                                       
                                                                  
                                                                     
 			
@@ -88,7 +92,7 @@
                                                 'walker'            => new wp_bootstrap_navwalker())
                                             );
                                             ?>
-                                        <div class="hidden-xs hidden-sm social-links-menu">
+                                        <div class="hidden-xs hidden-sm hidden-md social-links-menu">
                                             <ul class="nav navbar-nav navbar-right ">
                                                 <li><a href="https://twitter.com/Garnier_Event"><img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/twitter-400x300.png" alt="twitter"></a></li>
                                                 <li><a href="#"><img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/pinterest-400x300.png" alt="pinterest"></a></li>

@@ -14,7 +14,7 @@ get_header(); ?>
 
 				get_template_part( 'template-parts/content', 'page-prestation' );
 
-                                ?><div class="lien-ancre-animations" ><a href="#ancre-animations"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/FlecheGrandeRose-01.png" alt="plus d'infos"></a></div>
+                                ?><div class="lien-ancre-animations" ><a href="#ancre-animations"><img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/FlecheGrandeRose-01.png" alt="plus d'infos"></a></div>
                                 <div id="ancre-animations"></div>
                                 <?php
                             if( have_rows('prestation-1') ):
@@ -49,9 +49,9 @@ get_header(); ?>
 
                                                <div class="col-xs-12 col-md-6 description-prestation element">
                                                    
-                                                   <article><a href="<?php echo the_sub_field('url_bouton_prestation'); ?>" class="h3-animation"><h3><?php echo the_sub_field('nom_de_la_prestation'); ?></h3></a>                                               <p><?php echo the_sub_field('sous_titre_presta'); ?></p>
-                                               <p><?php echo the_sub_field('description_de_la_prestation'); ?></p>
-                                                <a href="<?php echo the_sub_field('url_bouton_prestation'); ?>" class="btn btn-default btn-voir"><?php echo the_sub_field('bouton-voir-prestation'); ?></a>
+                                                   <article class="content-prestation"><a href="<?php echo the_sub_field('url_bouton_prestation'); ?>" class="h3-animation"><h3><?php echo the_sub_field('nom_de_la_prestation'); ?></h3></a>                                               <p><?php echo the_sub_field('sous_titre_presta'); ?></p>
+                                                        <p><?php echo the_sub_field('description_de_la_prestation'); ?></p>
+                                                        <a href="<?php echo the_sub_field('url_bouton_prestation'); ?>" class="btn btn-default btn-voir"><?php echo the_sub_field('bouton-voir-prestation'); ?></a>
                                                    </article>
                                                
                                                </div>   

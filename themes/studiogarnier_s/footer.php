@@ -19,8 +19,8 @@
             <div class="row">
                 <div class='col-md-12 logo-footer footer1'>
                     
-                    <div class='col-md-5'>
-                    <img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/LogoGARNIER-STUDIOS_blanc-900.png" alt="logo Garnier Studios ">
+                    <div class='col-md-4'>
+                    <img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/LogoGARNIER-STUDIOS_blanc-900.png" alt="logo Garnier Studios ">
                     
                     </div>
                 </div>
@@ -28,7 +28,7 @@
             <div class="row footer2">
                     
                             <div class='col-xs-12 col-md-5 footer2-1'>
-                                    Garnier Event est une marque du groupe <span>Garnier Studio</span>.<br>
+                                    Garnier Event est une marque du groupe <span>Garnier Studios</span>.<br>
                             Depuis 1978, le groupe Garnier Studio réunit des photographes, des stylistes, des modeleurs 3D, au service de votre image.
 
                             </div>
@@ -48,9 +48,9 @@
                                 <div>Nous suivre
                                 <div id="hr"><hr></div>
                                 <ul class="reseaux-sociaux-footer">
-                                                <li><a href="https://twitter.com/Garnier_Event"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/twitter-footer-300.png" alt="twitter"></a></li>
-                                                <li><a href="https://www.facebook.com/GarnierEvent"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/facebook-footer-300.png" alt="facebook"></a></li>
-                                                 <li><a href="https://vimeo.com/studiosgarnier"><img src="<?php echo bloginfo('wpurl');?>/wp-includes/images/studiogarnier/vimeo-footer-300.png" alt="vimeo"></a></li>
+                                                <li><a href="https://twitter.com/Garnier_Event"><img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/twitter-footer-300.png" alt="twitter"></a></li>
+                                                <li><a href="https://www.facebook.com/GarnierEvent"><img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/facebook-footer-300.png" alt="facebook"></a></li>
+                                                 <li><a href="https://vimeo.com/studiosgarnier"><img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/vimeo-footer-300.png" alt="vimeo"></a></li>
 
                                             </ul>
                                 </div>

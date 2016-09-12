@@ -1,4 +1,6 @@
 
+
+
 /*--------------------------------------------------------------
 # CSS STUDIO GARNIER
 --------------------------------------------------------------*/
@@ -19,7 +21,7 @@ input,
 select,
 textarea {
 	color: #000;
-	font-family: 'Droid Sans', sans-serif;
+	font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
 	font-size: 14px;
         
 	/*font-size: 1rem;*/
@@ -28,9 +30,7 @@ textarea {
 body{
     background-color: #fff;
 }
-.site-content{
-    background-color: #fff;
-}
+
 
 
 
@@ -63,6 +63,10 @@ footer a:focus, footer a:hover{
     text-decoration: none;
 }
 
+
+.current-cat a{
+      color: #ff007a;
+}
 
 /* Content*/
 
@@ -205,6 +209,7 @@ nav ul a img{
     font-family: 'Droid Sans', sans-serif;
     font-weight: 400;
     font-size: 14px;
+    margin-top: 100px;
 }
 
 /* footer 1 */
@@ -227,7 +232,7 @@ nav ul a img{
 }
 
 .footer2-1{
-    padding-right: 100px;
+    padding-right: 120px;
     padding-left: 0px;
 }
 
@@ -251,10 +256,17 @@ nav ul a img{
 .btn.btn-contact {
   border-radius:0;
   background-color: #ff007a;
+  color:#fff;
 }
 
 .btn-contact:hover{
-    background-color: #e6e6e6;
+    background-color: #fd4f95;
+    color:#ede9e4;
+}
+
+.btn-contact:active:focus{
+    background-color: #e10467;
+    color:#fff;
 }
 
 /* footer 2-3 */
@@ -311,6 +323,8 @@ h1.entry-title{
 
 
 
+
+
 /*--------------------------------------------------------------
                             Pages 
 --------------------------------------------------------------*/
@@ -318,6 +332,8 @@ h1.entry-title{
 .entry-header-page{
     position: relative;
 }
+
+
 
 .entry-title-page{
     position: absolute;
@@ -338,28 +354,18 @@ h1.entry-title{
 --------------------------------------------------------------*/
 
 .prestation:nth-child(2n+1){
-   
+    
+    display: -webkit-flex;
     display: flex;
-     
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+   
 
 }
-
-.prestation:nth-child(2n+1)>.element:nth-child(1) {
-  
-    
-    order:2;
-    width:50%;
-}
-
-
-
-.prestation:nth-child(2n+1)>.element:nth-child(2) {
-    
-    
-    order:1;
-    width:50%;
-}
-
+/*
+.content-prestation{
+    padding-left: 30px;
+}*/
 
 
 .box-liens-relative{
@@ -415,6 +421,63 @@ description.prestation{
   
 }
 
+
+
+// btn nous contacter
+
+.btn-contactez-nous {
+    margin: 15px 45px 5px 45px;
+    padding: 8px 13px;
+    border-radius:2px;
+    border: 2px solid;
+    border-color: #ff007a;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color:#ff007a;
+    
+}
+
+
+ a.btn-contactez-nous{
+    margin: 15px 45px 5px 45px;
+    color: #ff007a;
+    text-decoration: none;
+    font-size: 18px;
+   
+}
+
+
+
+.btn.btn-contactez-nous {
+  border-radius:2px;
+  border: 2px solid;
+  background-color: #fff;
+  border-color: #ff007a;
+  
+  background-image: none;
+
+  background-position:97% 50%;
+  background-repeat:no-repeat;
+  
+}
+
+.btn-contactez-nous:hover, a:focus.btn-contactez-nous{
+    background-color: #ff007a;
+    border-color: #ff007a;
+    color: #fff;
+     background-image: none;
+
+}
+
+.btn-contactez-nous:active:focus{
+    background-color: #e10467;
+    color:#fff;
+    border-color:#e10467;
+}
+
+
+// btn voir
+
 .btn-voir {
     margin: 15px 45px 5px 45px;
     padding: 8px 13px;
@@ -424,33 +487,45 @@ description.prestation{
     font-weight: 700;
     letter-spacing: 1px;
     color:#ff007a;
-   
-   
+    
 }
 
 
-
- a.btn-voir, a:visited.btn-voir, a:focus.btn-voir, a:visited.btn-voir {
+ a.btn-voir{
+    margin: 15px 45px 5px 45px;
     color: #ff007a;
     text-decoration: none;
     font-size: 18px;
     padding-right:30px;
 }
 
+
+
 .btn.btn-voir {
   border-radius:2px;
   border: 2px solid;
   background-color: #fff;
   border-color: #ff007a;
-  background-image: url(/wp-includes/images/studiogarnier/fleche-bouton-voir-01.png);
+  
+  background-image: url(/wp-content/themes/studiogarnier_s/img/fleche-bouton-voir-01.png);
+
   background-position:97% 50%;
   background-repeat:no-repeat;
   
 }
 
-.btn-voir:hover{
-    background-color: #fff;
+.btn-voir:hover, a:focus.btn-voir{
+    background-color: #ff007a;
     border-color: #ff007a;
+    color: #fff;
+     background-image: url(/wp-content/themes/studiogarnier_s/img/fleche-bouton-voir-02.png);
+
+}
+
+.btn-voir:active:focus{
+    background-color: #e10467;
+    color:#fff;
+    border-color:#e10467;
 }
 
 
@@ -551,16 +626,19 @@ height: auto;
     display:none;
 }
 
+.page-taxonomy>.row{
+    margin: 0;
+}
+
 
 /*--------------------------------------------------------------
                             Page References
 --------------------------------------------------------------*/
 
-.vignette, .vignette>article{
+.vignette-taxonomy, .vignette, .vignette>article{
     padding: 0;
     margin: 0;
 }
-
 
 
 /*--------------------------------------------------------------
@@ -837,6 +915,12 @@ h1.titre-home{
     width: 100%;
 }
 
+
+#forme-oblique{
+    width:100%;
+}
+
+
 .oblique{
     margin:0;
     padding: 0;
@@ -950,8 +1034,12 @@ section.quelques-references h2 a:hover{
 
 
 
-.vignette article, .vignettes-ref-home{
-    margin:  2%;
+.vignette{
+    margin:  0.5%;
+}
+
+.vignette-taxonomy{
+    margin:  0.5%;
 }
 
 
@@ -991,11 +1079,13 @@ section.quelques-references h2 a:hover{
    
 }
 
-.section-vignettes{
+.section-vignettes, .section-vignettes-page-reference{
     padding : 10px 0px 10px 0px;
 }
 
-
+.section-vignettes-page-reference>row{
+    margin: 0;
+}
 
 vignette .thumbnail-reference-home img:hover{
      opacity : 0;
@@ -1037,20 +1127,24 @@ vignette .thumbnail-reference-home img:hover{
 }
 
 
-/*.vignettes-ref-home{
-    margin: 5px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%
-}*/
 
-section-vignettes{
-    background-color: #fff;
+.section-vignettes, .section-vignettes-page-reference{
+    
+    margin:1% 1.8% 1% 1.8%;
 }
 
 .vignette{
-    width: 25%;
+    width: 49%;
     float: left;
+}
+
+.vignette-taxonomy{
+      width: 49%;
+    float: left;
+}
+
+.thumbnail-bg img{
+    width:100%;
 }
 
 .partenaire{
@@ -1199,8 +1293,11 @@ section-vignettes{
      font-weight: 400;
      list-style: none;
      color:#7d7d7d;
-     
-    
+        
+}
+
+.current-cat{
+      color: #ff007a;
 }
 
 .page-taxonomy aside ul>li>ul>li>a{
@@ -1214,7 +1311,10 @@ section-vignettes{
     
 }
     
-.page-taxonomy aside{}
+.page-taxonomy aside ul>li>ul>.current-cat>a, .current-cat {
+      color: #ff007a;
+      
+}
 /*--------------------------------------------------------------
 -------------------------*****************
                             MEDIAQUERIES
@@ -1286,6 +1386,20 @@ section-vignettes{
     font-size: 22px;
     margin: 0;
 }
+
+
+
+
+
+.vignette{
+    width: 96%;
+   
+}
+
+.vignette-taxonomy{
+    width: 96%;
+   
+}
 /*--------------------------------------------------------------
                             Page Equipe
 --------------------------------------------------------------*/
@@ -1313,25 +1427,14 @@ section-vignettes{
 
 
 .prestation:nth-child(2n+1){
-   
+   display: -webkit-flex;
     display: flex;
-     flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
 
 }
 
-.prestation:nth-child(2n+1)>.element:nth-child(1) {
-  
-    
-    order:2;
-    width:100%;
-}
 
-.prestation:nth-child(2n+1)>.element:nth-child(2) {
-    
-   
-    order:1;
-    width:100%;
-}
 
 
 
@@ -1346,37 +1449,24 @@ section-vignettes{
     
 }
 
-.description-prestation.element > article > a.btn.btn-default.btn-voir{
-    float:none;
-    margin-bottom:150px;
-    font-size: 16px;
-    
-}
 
 
 
-
-
-.prestation:nth-child(2n+1){
-   
-    display: flex;
-    flex-direction: column;
-
-}
-
-.prestation:nth-child(2n+1)>.element:nth-child(1) {
+.prestation:nth-child(2n+1)>.element:nth-child(2)>article {
+   float:left;
+   text-align: left;
   
-    
-    order:1;
-    width:100%;
 }
 
-.prestation:nth-child(2n+1)>.element:nth-child(2) {
-    
-    
-    order:2;
-    width:100%;
+
+.description-prestation.element > article > a.btn.btn-default.btn-voir{
+  
 }
+
+
+
+
+
 
 .description-prestation article {
     width: 100%;
@@ -1389,7 +1479,7 @@ section-vignettes{
 
 .description-prestation.element > article > a.btn.btn-default.btn-voir{
    font-size: 14px;
-    margin: 10px 20px 150px 20px;
+    margin: 30px 20px 120px 45px;
    
     
 }
@@ -1435,6 +1525,15 @@ section-vignettes{
     border:none;
     
 }
+.vignette{
+    width: 48%;
+   
+}
+
+.vignette-taxonomy{
+    width: 48%;
+   
+}
 
 
 
@@ -1443,8 +1542,9 @@ section-vignettes{
 --------------------------------------------------------------*/
 
 .prestation:nth-child(2n+1){
-   
+   display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
 
 }
@@ -1482,6 +1582,49 @@ section-vignettes{
     height:500px;
 }
   
+.prestation:nth-child(2n+1)>.element:nth-child(2)>article {
+   float:left;
+   text-align: left;
+  
+}
+
+.description-prestation.element > article > a.btn.btn-default.btn-voir{
+    float:none;
+    
+    font-size: 16px;
+    margin: 30px 20px 120px 45px;
+    
+}
+
+
+// changement de point de rupture pour le burger Bootsrap
+
+.navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+
 
 }
 
@@ -1499,6 +1642,20 @@ section-vignettes{
     font-size: 100px;
  
 }
+
+.vignette{
+    width: 24%;
+   
+}
+
+.vignette-taxonomy{
+    width: 48%;
+  
+}
+
+
+
+
 }
 
 
@@ -1529,6 +1686,15 @@ section-vignettes{
     
 }
 
+.vignette{
+    width: 24%;
+   
+}
+
+.vignette-taxonomy{
+    width: 48%;
+   
+}
 
 
     
@@ -1536,8 +1702,18 @@ section-vignettes{
 
 @media (min-width: 1400px){
     
-    .section-vignettes{
+    .section-vignettes, .section-vignettes-page-reference{
     padding : 10px 250px 10px 250px;
+}
+
+.vignette{
+    width: 24%;
+   
+}
+
+.vignette-taxonomy{
+    width: 48%;
+   
 }
 
     
