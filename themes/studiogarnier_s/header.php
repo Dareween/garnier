@@ -94,9 +94,9 @@
                                             ?>
                                         <div class="hidden-xs hidden-sm hidden-md social-links-menu">
                                             <ul class="nav navbar-nav navbar-right ">
-                                                <li><a href="https://twitter.com/Garnier_Event"><img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/twitter-400x300.png" alt="twitter"></a></li>
-                                                <li><a href="#"><img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/pinterest-400x300.png" alt="pinterest"></a></li>
-                                                 <li><a href="https://www.facebook.com/GarnierEvent"><img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/facebook-400x300.png" alt="facebook"></a></li>
+                                                <li><a href="https://twitter.com/Garnier_Event"><div></div></a></li>
+                                                  <li><a href="https://twitter.com/Garnier_Event"><div></div></a></li>
+                                                 <li><a href="https://www.facebook.com/GarnierEvent"></a></li>
 
                                             </ul>
                                         </div>

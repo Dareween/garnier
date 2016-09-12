@@ -39,6 +39,8 @@ get_header(); ?>
                                                 <?php
                                                 else:
                                                 $image = get_sub_field('visuel_de_la_prestation');
+                                                $lienImage = get_sub_field('url_bouton_prestation');
+                                              
                                                 ?>
                                                 <div class="col-xs-12 col-md-6 image-prestation element"><img src="<?php echo $image['url']; ?>"  alt="<?php echo $image['alt'] ?>" /></div>
                                                 <?php endif;
@@ -49,7 +51,8 @@ get_header(); ?>
 
                                                <div class="col-xs-12 col-md-6 description-prestation element">
                                                    
-                                                   <article class="content-prestation"><a href="<?php echo the_sub_field('url_bouton_prestation'); ?>" class="h3-animation"><h3><?php echo the_sub_field('nom_de_la_prestation'); ?></h3></a>                                               <p><?php echo the_sub_field('sous_titre_presta'); ?></p>
+                                                   <article class="content-prestation">
+                                                       <a href="<?php echo the_sub_field('url_bouton_prestation'); ?>" class="h3-animation"><h3><?php echo the_sub_field('nom_de_la_prestation'); ?></h3></a>                                               <p><?php echo the_sub_field('sous_titre_presta'); ?></p>
                                                         <p><?php echo the_sub_field('description_de_la_prestation'); ?></p>
                                                         <a href="<?php echo the_sub_field('url_bouton_prestation'); ?>" class="btn btn-default btn-voir"><?php echo the_sub_field('bouton-voir-prestation'); ?></a>
                                                    </article>

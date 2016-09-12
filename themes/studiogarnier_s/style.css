@@ -39,6 +39,32 @@ h1, h2, h3{
     font-weight:bold;
    
 }
+
+
+h1{
+    font-size: 120px;
+}
+
+.site-title{
+    font-size: 2px;
+    
+}
+
+
+
+.entry-header-single-reference h1{
+    font-size: 24px;
+}
+
+entry-content-single-reference p{
+    margin-bottom : 30px;
+    margin-bottom : 80px;
+    
+}
+
+
+
+
 .navbar-default .navbar-nav>li>a,
 .navbar-nav a{
     font-family: 'Droid Sans', sans-serif;
@@ -161,6 +187,7 @@ img{
     border-radius: 0px;
     -webkit-box-shadow: 0 0px 0px rgba(0,0,0,0);
     box-shadow: 0 0px 0px rgba(0,0,0,0);
+   background-color: #fcfaf9;
 }
 
 .dropdown-menu li a {
@@ -188,16 +215,69 @@ img{
 /* ------------------------- Reseaux sociaux ---------------------------- */
 
 
-nav ul a img{
-    height: 12px;
-   
-}
+
 
 .social-links-menu{
     padding: 16px 0px 0px 20px;
 }
 
  
+
+.social-links-menu ul li:nth-child(1) a{
+    height: 12px;
+    width: 16px;
+     margin : 20px 5px;
+    background-image: url(/wp-content/themes/studiogarnier_s/img/facebook2.png);
+      background-repeat:no-repeat;
+}
+
+.social-links-menu ul li:nth-child(2) a{
+    height: 12px;
+    width: 16px;
+      margin : 20px 5px;
+    background-image: url(/wp-content/themes/studiogarnier_s/img/pinterest2.png);
+   background-repeat:no-repeat;
+}
+
+
+.social-links-menu ul li:nth-child(3) a{
+    height: 12px;
+    width: 16px;
+   margin : 20px 5px;
+    background-image: url(/wp-content/themes/studiogarnier_s/img/twitter2.png);
+    background-repeat:no-repeat;
+    
+    
+}
+
+.social-links-menu ul li:nth-child(1) a:hover{
+    height: 12px;
+    width: 16px;
+    margin : 20px 5px;
+    background-image: url(/wp-content/themes/studiogarnier_s/img/facebook-rose.png);
+      background-repeat:no-repeat;
+     
+}
+
+.social-links-menu ul li:nth-child(2) a:hover{
+    height: 12px;
+    width: 16px;
+  
+    background-image: url(/wp-content/themes/studiogarnier_s/img/pinterest-rose.png);
+   background-repeat:no-repeat;
+   
+}
+
+
+.social-links-menu ul li:nth-child(3) a:hover{
+    height: 12px;
+    width: 16px;
+    background-image: url(/wp-content/themes/studiogarnier_s/img/twitter-rose.png);
+    background-repeat:no-repeat;
+    
+    
+    
+}
 
 
 
@@ -323,6 +403,7 @@ h1.entry-title{
     text-align: left;
     margin-top:40px;
     margin-bottom:30px;
+    
 }
 
 
@@ -345,7 +426,7 @@ h1.entry-title{
     left: 10%;
     top:35%;
     color:#fff;
-    width:700px;
+    width:1000px;
     text-align: left;
     
 }        
@@ -567,6 +648,11 @@ height: auto;
      
 }
 
+.entry-content-page-prestation p{
+    width : 600px;
+    margin-left: 75px;
+}
+
 .lien-ancre-animations>a>img{
     width:30%;
   
@@ -631,6 +717,10 @@ height: auto;
 }
 
 .page-taxonomy>.row{
+    margin: 0;
+}
+
+.page-taxonomy>div>div{
     margin: 0;
 }
 
@@ -753,6 +843,20 @@ div.single-cat-hr > hr{
 /*--------------------------------------------------------------
                             Page Accueil
 --------------------------------------------------------------*/
+
+#main > div:nth-child(1) > div > header > h1{
+    
+    position: absolute;
+    font-size: 120px;
+    left: 10%;
+    top:35%;
+    color:#fff;
+    width:1000px;
+    text-align: left;
+    width: 600px;
+    
+}    
+
 
 .carousel-inner>.item{
     height:600px;
@@ -1083,9 +1187,7 @@ section.quelques-references h2 a:hover{
    
 }
 
-.section-vignettes, .section-vignettes-page-reference{
-    padding : 10px 0px 10px 0px;
-}
+
 
 .section-vignettes-page-reference>row{
     margin: 0;
@@ -1134,7 +1236,7 @@ vignette .thumbnail-reference-home img:hover{
 
 .section-vignettes, .section-vignettes-page-reference{
     
-    margin:1% 1.8% 1% 1.8%;
+    margin:1% 0.5% 1% 0.5%;
 }
 
 .vignette{

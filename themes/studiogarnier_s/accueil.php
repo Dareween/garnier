@@ -21,20 +21,10 @@ get_header(); ?>
                         <div class="container-fluid">
                             <div class="row">
                                 
-                                <header class="entry-header entry-header-page">
-                                <?php if ( get_header_image() ) : ?>
-                                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                      <img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
-                                     
-                                      <?php
-                                      $image_url = header_image();
-                                      
-                                      ?>
-                                      
-                                          
-                            </a>
-                        <?php endif; // End header image check. ?>
-                                </header><!-- .entry-header -->
+                              <header class="entry-header entry-header-page container-fluid">
+                <?php the_post_thumbnail( 'full' ); ?>
+			<?php the_title( '<h1 class="entry-title entry-title-page">', '.</h1>' ); ?>
+	</header><!-- .entry-header -->
                             </div>     
                         </div>
                         
@@ -112,7 +102,7 @@ get_header(); ?>
                                                  
                                                 <a href="<?php the_permalink() ?>"><article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                                                     <div class="thumbnail-reference-home"><div class="thumbnail-bg"><?php the_post_thumbnail( 'medium-750' ) ?></div></div>
-                                                    <div class="thumbnail-text"><h5><?php the_title() ?></h5>
+                                                    <div class="thumbnail-text"><h5><?php the_field('titre_vignette'); ?></h5>
                                                         
                                                         <div class="liens-taxo-thumbnail"><?php echo get_the_term_list( $post->ID, 'animations', '', ', ', ',' ); ?>
                                                         <?php echo get_the_term_list( $post->ID, 'evenements', '', ', ', ',' ); ?>
