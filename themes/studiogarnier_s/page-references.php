@@ -3,56 +3,38 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-                    <div class="container-fuid page-taxonomy">
+		<div class="container-fluid page-taxonomy">
                         <div class="row">
                           <div class="col-sm-9">
                      
                      
                   
-		<?php
-		if ( have_posts() ) : ?>
-                       
-			
-                        <section class="boucle-references">
-			 
-                                           <?php $loop = new WP_Query( array( 'post_type' => 'reference', 'posts_per_page' => '22' ) ); ?>
-                                            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                                             <div class="col-xs-12 col-sm-6 col-md-6 vignette">
-                                                <a href="<?php the_permalink() ?>"><article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                                                    <div class="thumbnail-reference-home"><div class="thumbnail-bg"><?php the_post_thumbnail( 'medium-750' ) ?></div></div>
-                                                    <div class="thumbnail-text"><h5><?php the_title() ?></h5>
-                                                        
-                                                        <div class="liens-taxo-thumbnail"><?php echo get_the_term_list( $post->ID, 'animations', '', ', ', ',' ); ?>
-                                                        <?php echo get_the_term_list( $post->ID, 'evenements', '', ', ', ',' ); ?>
-                                                       <?php echo get_the_term_list( $post->ID, 'prestations', '', ', ', '' ); ?></div>
-                                                    </div>
+                                <section class="section-vignettes-page-reference">
+                                                        <div class="row vignettes-ref-home">
+                                                            <?php $loop = new WP_Query( array( 'post_type' => 'reference', 'posts_per_page' => '8' ) ); ?>
+                                                            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                                                             <div class="col-xs-6 col-sm-6 col-md-6 vignette-taxonomy">
 
-                                                </article><!-- #post-## -->
-                                                </a>
-                                             </div><!-- .vignette -->
-                                            <?php endwhile; wp_reset_query(); ?>
-                                        
-                            
-                            
-                            
-                            
-                            <?php
-		
+                                                                <a href="<?php the_permalink() ?>"><article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                                                                    <div class="thumbnail-reference-home"><div class="thumbnail-bg"><?php the_post_thumbnail( 'medium-750' ) ?></div></div>
+                                                                    <div class="thumbnail-text"><h5><?php the_title() ?></h5>
 
-			
+                                                                        <div class="liens-taxo-thumbnail"><?php echo get_the_term_list( $post->ID, 'animations', '', ', ', ',' ); ?>
+                                                                        <?php echo get_the_term_list( $post->ID, 'evenements', '', ', ', ',' ); ?>
+                                                                       <?php echo get_the_term_list( $post->ID, 'prestations', '', ', ', '' ); ?></div>
+                                                                    </div>
 
-		else :
-                            
-			get_template_part( 'template-parts/content', 'none' );
-                       
-                       
-                 
-		endif; ?>
-          
- 
-                        </section>
-                </div>
+                                                                </article><!-- #post-## -->
+                                                                </a>
+
+                                                             </div><!-- .vignette -->
+                                                            <?php endwhile; wp_reset_query(); ?>
+                                                        </div>
+                                                    </section>    
+
+
+                     
+                            </div>
                     <aside class="col-sm-3">
                         
                <?php 
