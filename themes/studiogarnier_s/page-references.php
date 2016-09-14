@@ -17,7 +17,11 @@ get_header(); ?>
 
                                                                 <a href="<?php the_permalink() ?>"><article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                                                                     <div class="thumbnail-reference-home"><div class="thumbnail-bg"><?php the_post_thumbnail( 'medium-750' ) ?></div></div>
-                                                                    <div class="thumbnail-text"><h5><?php the_title() ?></h5>
+                                                                    <div class="thumbnail-text">
+                                                                        <h5><?php the_field('titre_vignette'); ?></h5>
+                                                                        <p class="thumbnail-sous-titre">
+                                                                            <?php the_field('sous-titre_vignette'); ?></p>
+
 
                                                                         <div class="liens-taxo-thumbnail"><?php echo get_the_term_list( $post->ID, 'animations', '', ', ', ',' ); ?>
                                                                         <?php echo get_the_term_list( $post->ID, 'evenements', '', ', ', ',' ); ?>
