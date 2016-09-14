@@ -87,7 +87,7 @@ get_header(); ?>
                        
                        
                           
-                            <section class="quelques-references">  
+                           <section class="quelques-references">  
                                    <div class="titre2-home"> 
                                         <h2 class="titre-home"><a href="http://devgarnier.dareween.fr/fr/references/">Nos références</a></h2>
                                     

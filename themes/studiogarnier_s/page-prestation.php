@@ -52,8 +52,8 @@ get_header(); ?>
                                                <div class="col-xs-12 col-md-6 description-prestation element">
                                                    
                                                    <article class="content-prestation">
-                                                       <a href="<?php echo the_sub_field('url_bouton_prestation'); ?>" class="h3-animation"><h3><?php echo the_sub_field('nom_de_la_prestation'); ?></h3></a>                                               <p><?php echo the_sub_field('sous_titre_presta'); ?></p>
-                                                        <p><?php echo the_sub_field('description_de_la_prestation'); ?></p>
+                                                       <h3><a href="<?php echo the_sub_field('url_bouton_prestation'); ?>" class="h3-animation"><?php echo the_sub_field('nom_de_la_prestation'); ?></a></h3>                                              
+                                                        <?php echo the_sub_field('description_de_la_prestation'); ?>
                                                         <a href="<?php echo the_sub_field('url_bouton_prestation'); ?>" class="btn btn-default btn-voir"><?php echo the_sub_field('bouton-voir-prestation'); ?></a>
                                                    </article>
                                                
@@ -82,8 +82,15 @@ get_header(); ?>
                         
                         
 
-                            endif;
-
+                            endif;?>
+                                <div class ="retrouvez-aussi">
+                             
+                                    <p><?php echo the_field('retrouvez_aussi'); ?><br>                                            
+                                    <a href="<?php echo the_field('prestation-suivante'); ?>" class="btn btn-default btn-voir"><?php echo the_field('prestation-suivante'); ?></a>
+                                  </p>
+                                </div>  
+                             
+<?php 
 			endwhile; // End of the loop.
 			?>
                     

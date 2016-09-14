@@ -293,7 +293,7 @@ img{
     font-family: 'Droid Sans', sans-serif;
     font-weight: 400;
     font-size: 14px;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 /* footer 1 */
@@ -302,10 +302,40 @@ img{
     padding: 0;
 }
 
-.logo-footer div{
-    margin: 80px 0px 55px 0px;
-    padding: 0 30px 0 0;
+.logo-footer>div>img{
+    margin-top: 60px; 
+    margin-left: auto;
+    margin-right: auto;
     
+    width: 35%;
+    text-align: center;
+    
+}
+
+.footer1{
+    padding-right: 120px;
+    padding-left: 120px;
+    text-align: center;
+}
+
+footer li{
+    list-style: none;
+    text-align:left;
+    font-size: 24px;
+    font-weight:700;
+    color:#b3b2b2;
+    padding-left:60px;
+}
+.footer2-1 > img{
+    width:45%;
+}
+
+#colophon > div > div:nth-child(1) > div > div.col-xs-12.footer1-1{
+    margin: 50px 0 40px 0;
+}
+
+.footer2-2 > a.btn.btn-default.btn-contact{
+    margin-bottom: 48px;
 }
 
 /* footer 2-1 */
@@ -316,8 +346,14 @@ img{
 }
 
 .footer2-1{
-    padding-right: 120px;
-    padding-left: 0px;
+    
+    
+}
+
+.trait-qqs-ref2{
+    height:80px;
+    border-top: 2px solid #fff;
+   
 }
 
 
@@ -422,7 +458,7 @@ h1.entry-title{
 
 .entry-title-page{
     position: absolute;
-    font-size: 80px;
+ 
     left: 10%;
     top:35%;
     color:#fff;
@@ -447,10 +483,10 @@ h1.entry-title{
    
 
 }
-/*
+
 .content-prestation{
-    padding-left: 30px;
-}*/
+    padding-top: 30px;
+}
 
 
 .box-liens-relative{
@@ -464,7 +500,10 @@ h1.entry-title{
 }
 
 .image-prestation>img{
-    border: 1px solid black;
+    
+    border: 1px solid rgba(0, 0, 0, .2);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 }
 
 description.prestation{
@@ -484,9 +523,9 @@ description.prestation{
     
 } 
 
-.description-prestation article>.h3-animation{
+div.col-xs-12.col-md-6.description-prestation.element > article a.h3-animation{
     
-    margin: 15px 45px 5px 45px;
+    margin: 15px 45px 25px 45px;
     
     color: #000;
     text-decoration: none;
@@ -497,6 +536,10 @@ description.prestation{
     
 .description-prestation article {
     width: 100%;
+}
+
+div.col-xs-12.col-md-6.description-prestation.element > article p{
+    margin-top:30px;
 }
    
 
@@ -563,6 +606,13 @@ description.prestation{
 
 // btn voir
 
+.btn-voir:active{
+-webkit-box-shadow: 0 0px 0px rgba(0,0,0,0);
+-moz-box-shadow: 0 5px 15px rgba(0,0,0,0);
+-o-box-shadow: 0 5px 15px rgba(0,0,0,0);
+box-shadow: 0 0px 0px rgba(0,0,0,0);
+}
+
 .btn-voir {
     margin: 15px 45px 5px 45px;
     padding: 8px 13px;
@@ -606,8 +656,7 @@ description.prestation{
      background-image: url(/wp-content/themes/studiogarnier_s/img/fleche-bouton-voir-02.png);
 
 }
-
-.btn-voir:active:focus{
+ .btn-voir:active:focus, a.btn-voir:active:hover{
     background-color: #e10467;
     color:#fff;
     border-color:#e10467;
@@ -664,11 +713,24 @@ height: auto;
     margin-right: auto;
 }
 
+
 #ancre-animations{
     height:50px;
 }
 
+
+.retrouvez-aussi{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
       
+#main > div.retrouvez-aussi > p{
+    margin-top:120px;
+    font-weight: 700;
+    font-size:24px;
+}
 
 /*--------------------------------------------------------------
                             Reference
@@ -735,6 +797,12 @@ height: auto;
 }
 
 
+.vignettes-ref-home:after {
+  content: ""; /* Important, sinon l'élément n'est pas généré. */
+  display: table;
+  clear: both;
+}
+
 /*--------------------------------------------------------------
                             Single
 --------------------------------------------------------------*/
@@ -759,6 +827,7 @@ h1.entry-title-single, h2.entry-title-single{
     text-align: center;
     margin-top:40px;
     margin-bottom:30px;
+    text-transform: uppercase;
 }
 
 h2.entry-title-single a{
@@ -768,6 +837,7 @@ h2.entry-title-single a{
 h2.entry-title-single a:hover, h2.entry-title-single a:focus{
     color:#ff007a;
     text-decoration: none;
+    
 }
 
 
@@ -824,7 +894,7 @@ div.single-cat-hr > hr{
 }
 
 .entry-content a, .entry-content a:visited{
-    color: #000;
+    color:#434343;
     text-decoration: none;
     font-weight: 400;
 }
@@ -837,6 +907,14 @@ div.single-cat-hr > hr{
 
 .categories-single{
     margin-bottom: 50px;
+}
+
+.categories, .categories>a {
+    color:#434343;
+}
+
+.entry-title-single{
+    font-size: 18px;
 }
 
 
@@ -1189,6 +1267,10 @@ section.quelques-references h2 a:hover{
 
 
 
+
+
+
+
 .section-vignettes-page-reference>row{
     margin: 0;
 }
@@ -1209,14 +1291,28 @@ vignette .thumbnail-reference-home img:hover{
 }
 
 .thumbnail-text h5{
-    padding: 25px 5px 0px 0;
+    padding: 20% 10% 0% 10%;
     font-size: 25px;
     margin:0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.thumbnail-text p{
+    padding: 0% 0% 3% 0%;
+    font-size: 20px;
+    margin:0;
+   
+    font-weight: 700;
 }
 
 .liens-taxo-thumbnail{
-    padding: 10px;
+    padding: 2% 8%;
     font-size: 15px;
+}
+
+.liens-taxo-thumbnail>a{
+    text-transform: capitalize;
 }
 
 
@@ -1226,14 +1322,18 @@ vignette .thumbnail-reference-home img:hover{
 }
 
 .partenaires{
-    background-color: #ede9e4;
+  
     padding-top: 50px;
     padding-bottom: 50px;
     
 }
 
+.partenaires-background{
+background-color: #ede9e4;
+border-bottom: 4px solid #ff007a;
 
-
+  }
+  
 .section-vignettes, .section-vignettes-page-reference{
     
     margin:1% 0.5% 1% 0.5%;
@@ -1247,6 +1347,7 @@ vignette .thumbnail-reference-home img:hover{
 .vignette-taxonomy{
       width: 49%;
     float: left;
+    
 }
 
 .thumbnail-bg img{
@@ -1265,7 +1366,6 @@ vignette .thumbnail-reference-home img:hover{
 
 .nombres{
     padding: 40px 0 60px 0;
-    border-top: 4px solid #ff007a ;
     
 }
 .circle {
@@ -1766,7 +1866,7 @@ vignette .thumbnail-reference-home img:hover{
 
 
 
-@media (min-width: 1200px) and (max-width: 1400px) 
+@media (min-width: 1200px) and (max-width: 1800px) 
  {
    
     .description-prestation article {
@@ -1806,9 +1906,9 @@ vignette .thumbnail-reference-home img:hover{
     
 }
 
-@media (min-width: 1400px){
+@media (min-width: 1800px){
     
-    .section-vignettes, .section-vignettes-page-reference{
+    .section-vignettes{
     padding : 10px 250px 10px 250px;
 }
 
@@ -1818,7 +1918,7 @@ vignette .thumbnail-reference-home img:hover{
 }
 
 .vignette-taxonomy{
-    width: 48%;
+    width: 32%;
    
 }
 

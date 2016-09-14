@@ -61,6 +61,8 @@
                     
                 </span><br>
                 
+                <?php echo do_shortcode('[supsystic-social-sharing id="1"]') ?>
+                
                
 	</div><!-- .entry-content -->
 

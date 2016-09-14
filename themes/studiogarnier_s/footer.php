@@ -19,43 +19,48 @@
             <div class="row">
                 <div class='col-md-12 logo-footer footer1'>
                     
-                    <div class='col-md-4'>
+                    <div class='col-md-12'>
                     <img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/LogoGARNIER-STUDIOS_blanc-900.png" alt="logo Garnier Studios ">
                     
                     </div>
+                      <div class='col-xs-12 footer1-1'>
+                           Garnier Event est une marque du groupe <span>Garnier Studios</span>.
+                            Depuis 1978, le groupe Garnier Studio réunit des photographes,<br> des stylistes, des modeleurs 3D, au service de votre image.
+
+                        </div>
+                    <div class="row"><div class="col-xs-4"></div><div class="col-xs-4 trait-qqs-ref2"></div><div class="col-xs-4"></div>
                 </div>
             </div><!-- end row -->
             <div class="row footer2">
                     
                             <div class='col-xs-12 col-md-5 footer2-1'>
-                                    Garnier Event est une marque du groupe <span>Garnier Studios</span>.<br>
-                            Depuis 1978, le groupe Garnier Studio réunit des photographes, des stylistes, des modeleurs 3D, au service de votre image.
-
+                                <img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/LogoGARNIER-STUDIOS_blanc-900.png" alt="logo Garnier Studios ">
+                    
+                                <ul>
+                                    <li>Habitat.</li>
+                                    <li>Industrie.</li>
+                                    <li>Food.</li>
+                                    <li>Digital.</li>
+                                    <li>Event.</li>
+                                </ul>
                             </div>
                             <div class='col-xs-12 col-md-4 footer2-2 '>
+                                <a href=#" class="btn btn-default btn-contact">Nous contacter</a>
                                 <div class="adresse">Garnier Event<br>
                                 7 rue Jan Palach<br>
                                 BP 310031<br>
                                 44801 Saint-Herblain CEDEX<br>
                                 tél : 02 51 78 67 70<br>
                                 </div>
-                                <a href=#" class="btn btn-default btn-contact">Nous contacter</a>
+                                <a href=#">Mentions légales</a>
+                                
                             </div>
 
                             <div class='col-xs-12 col-md-3 footer2-3'>
-                                <div><a href="#">Presse</a></div>
-
-                                <div>Nous suivre
-                                <div id="hr"><hr></div>
-                                <ul class="reseaux-sociaux-footer">
-                                                <li><a href="https://twitter.com/Garnier_Event"><img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/twitter-footer-300.png" alt="twitter"></a></li>
-                                                <li><a href="https://www.facebook.com/GarnierEvent"><img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/facebook-footer-300.png" alt="facebook"></a></li>
-                                                 <li><a href="https://vimeo.com/studiosgarnier"><img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/vimeo-footer-300.png" alt="vimeo"></a></li>
-
-                                            </ul>
+                              
+                              <a class="twitter-timeline" data-width="420" data-height="400" data-theme="dark" data-link-color="#ff007a" href="https://twitter.com/Garnier_Event">Tweets by Garnier_Event</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                                 </div>
 
-                                <div><a href="#">Mentions légales et crédits</a></div>
                             </div>
                           
                 </div><!-- end row -->

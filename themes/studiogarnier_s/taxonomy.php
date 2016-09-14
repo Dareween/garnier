@@ -19,7 +19,7 @@ get_header(); ?>
                   
                                 <section class="section-vignettes-page-reference">
                                                         <div class="row vignettes-ref-home">
-                                                            <?php $loop = new WP_Query( array( 'post_type' => 'reference', 'posts_per_page' => '8' ) ); ?>
+                                                            <?php $loop = new WP_Query( array( 'post_type' => 'reference', 'posts_per_page' => '20' ) ); ?>
                                                             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                                                              <div class="col-xs-6 col-sm-6 col-md-6 vignette-taxonomy">
 
