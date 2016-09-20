@@ -22,9 +22,11 @@ get_header(); ?>
                             <div class="row">
                                 
                               <header class="entry-header entry-header-page container-fluid">
-                <?php the_post_thumbnail( 'full' ); ?>
-			<?php the_title( '<h1 class="entry-title entry-title-page">', '.</h1>' ); ?>
-	</header><!-- .entry-header -->
+                                <?php the_post_thumbnail( 'full' ); ?>
+                                  <div class="bloc-h1">
+                                <?php the_title( '<h1 class="entry-title entry-title-page">', '.</h1>' ); ?>
+                                  </div>
+                              </header><!-- .entry-header -->
                             </div>     
                         </div>
                         
@@ -42,7 +44,9 @@ get_header(); ?>
                                                 );    
                                             ?>
                                         </article>
+                                       
                                     </section>
+                                  
                                 </div>     
                             </div>
                         
@@ -66,7 +70,7 @@ get_header(); ?>
                             <div class="row">
                                 
                                   
-                                  <img id="forme-oblique" src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/obliques-roses.png">
+                                  <img id="forme-oblique" src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/fond-oblique-3px.svg">
                            
                                     
                                             <div class="lien-prestation-home lien-presta-1 col-sm-6 col-md-3"><a href="<?php the_field('lien-prestation-1'); ?>"><?php the_field('titre-lien-1'); ?></a></div>
@@ -91,7 +95,7 @@ get_header(); ?>
                                    <div class="titre2-home"> 
                                         <h2 class="titre-home"><a href="http://devgarnier.dareween.fr/fr/references/">Nos références</a></h2>
                                     
-                                         <div class="row"><div class="col-xs-5"></div><div class="col-xs-2 trait-qqs-ref"></div><div class="col-xs-5"></div>
+                                         <!--<div class="row"><div class="col-xs-5"></div><div class="col-xs-2 trait-qqs-ref"></div><div class="col-xs-5"></div>-->
                                          </div>
                                    </div>
                                     <section class="section-vignettes">

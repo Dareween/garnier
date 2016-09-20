@@ -13,7 +13,9 @@
 	<header class="entry-header entry-header-page container-fluid">
                 
                 <?php the_post_thumbnail( 'full' ); ?>
+             <div class="bloc-h1">
 		<?php the_title( '<h1 class="entry-title entry-title-page">', '.</h1>' ); ?>
+             </div>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content container">

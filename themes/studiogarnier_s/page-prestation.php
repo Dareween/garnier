@@ -14,7 +14,7 @@ get_header(); ?>
 
 				get_template_part( 'template-parts/content', 'page-prestation' );
 
-                                ?><div class="lien-ancre-animations" ><a href="#ancre-animations"><img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/FlecheGrandeRose-01.png" alt="plus d'infos"></a></div>
+                                ?><div class="lien-ancre-animations" ><a href="#ancre-animations"><img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/FlecheGrandeRose.svg" alt="plus d'infos"></a></div>
                                 <div id="ancre-animations"></div>
                                 <?php
                             if( have_rows('prestation-1') ):

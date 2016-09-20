@@ -24,11 +24,11 @@
                     
                     </div>
                       <div class='col-xs-12 footer1-1'>
-                           Garnier Event est une marque du groupe <span>Garnier Studios</span>.
-                            Depuis 1978, le groupe Garnier Studio réunit des photographes,<br> des stylistes, des modeleurs 3D, au service de votre image.
+                          <p class="yapas-photos">Y'a pas photos...</p>
+                          <p>Garnier Event pôle événementiel de Garnier Studios. Depuis 1978, Garnier Studios met ses photographes, ses réalisateurs, ses régisseurs, au service de votre image.</p>
 
                         </div>
-                    <div class="row"><div class="col-xs-4"></div><div class="col-xs-4 trait-qqs-ref2"></div><div class="col-xs-4"></div>
+                    <div class="row"><div class="hidden-xs col-sm-4"></div><div class="col-xs-7 col-sm-4 trait-qqs-ref2"></div><div class="col-xs-5 col-sm-4"></div>
                 </div>
             </div><!-- end row -->
             <div class="row footer2">
@@ -37,11 +37,11 @@
                                 <img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/LogoGARNIER-STUDIOS_blanc-900.png" alt="logo Garnier Studios ">
                     
                                 <ul>
-                                    <li>Habitat.</li>
-                                    <li>Industrie.</li>
-                                    <li>Food.</li>
-                                    <li>Digital.</li>
-                                    <li>Event.</li>
+                                    <li><a href="#">Habitat.</a></li>
+                                    <li><a href="#">Industrie.</a></li>
+                                    <li><a href="#">Food.</a></li>
+                                    <li><a href="#">Digital.</a></li>
+                                    <li><a href="#">Event.</a></li>
                                 </ul>
                             </div>
                             <div class='col-xs-12 col-md-4 footer2-2 '>
@@ -52,11 +52,12 @@
                                 44801 Saint-Herblain CEDEX<br>
                                 tél : 02 51 78 67 70<br>
                                 </div>
-                                <a href=#">Mentions légales</a>
+                                <a href=#">Mentions légales</a><br>
+                                <a href=#">Presse</a><br>
                                 
                             </div>
 
-                            <div class='col-xs-12 col-md-3 footer2-3'>
+                            <div class=' hidden-xs hidden-sm col-xs-12 col-md-3 footer2-3'>
                               
                               <a class="twitter-timeline" data-width="420" data-height="400" data-theme="dark" data-link-color="#ff007a" href="https://twitter.com/Garnier_Event">Tweets by Garnier_Event</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                                 </div>

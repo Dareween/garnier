@@ -68,7 +68,7 @@ entry-content-single-reference p{
 .navbar-default .navbar-nav>li>a,
 .navbar-nav a{
     font-family: 'Droid Sans', sans-serif;
-    font-weight:bold;
+    /*font-weight:700;*/
     color: #000;
    
 }
@@ -333,6 +333,14 @@ footer li{
     color:#b3b2b2;
     padding-left:60px;
 }
+
+div.col-xs-12.col-md-5.footer2-1 > ul > li > a{
+    color: #b3b2b2;
+}
+
+div.col-xs-12.col-md-5.footer2-1 > ul > li > a:hover{
+    color: #ff007a;
+}
 .footer2-1 > img{
     width:45%;
 }
@@ -442,6 +450,13 @@ margin : 8px 0 0px 0;
     
 }
 
+.yapas-photos{
+    font-size:20px;
+    margin:0px;
+    font-weight: 700;
+    
+}
+
 /*--------------------------------------------------------------
                             Posts type et Pages 
 --------------------------------------------------------------*/
@@ -468,16 +483,19 @@ h1.entry-title{
 
 
 
-.entry-title-page{
+.bloc-h1{
     position: absolute;
- 
+ color:#fff;
+    max-width:1000px;
+    text-align: left;
     left: 10%;
     top:35%;
     color:#fff;
-    width:1000px;
-    text-align: left;
     
-}        
+    
+}     
+
+
   
 
 
@@ -1280,7 +1298,86 @@ section.quelques-references h2 a:hover{
 
 
 
+/*galerie equipe */
 
+.thumbnail-bg-equipe{
+    position: relative;
+     opacity : 1;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+    transition: opacity .5s ease-in;
+    -moz-transition: opacity .5s ease-in;
+    -webkit-transition: opacity .5s ease-in;
+    -o-transition: opacity .5s ease-in;
+}
+
+
+
+.thumbnail-text-equipe{
+    position: absolute;
+    text-align: center;
+     top: 0%;
+    left: 0%;
+    color: #fff;
+       opacity : 0;
+     transition: opacity .5s ease-in;
+    -moz-transition: opacity .5s ease-in;
+    -webkit-transition: opacity .5s ease-in;
+    -o-transition: opacity .5s ease-in;
+      transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+    
+   
+    width: 100%;
+   height:100%;
+   
+}
+
+
+.thumbnail-equipe img:hover{
+     opacity : 0;
+     background-color:#ff007a; 
+}
+
+.thumbnail-text-equipe:hover{
+    opacity : 1;
+    background-color:#ff007a; 
+}
+
+
+.nom-membre-equipe{
+    padding-top:10%;
+    text-transform: uppercase;
+    font-weight: 700;
+    color:#fff;
+}
+
+.fonction-membre-equipe{
+    padding-top:2%;
+    font-weight: 700;
+    color:#fff;
+}
+
+
+/*---------*/
+
+
+
+.equipe h2{
+    text-align: center;
+    font-size: 60px;
+
+}
+
+.equipe p{
+    padding: 0 10% 0 10%;
+    margin-top: 20px;
+    text-align: center;
+}
 
 
 .section-vignettes-page-reference>row{
@@ -1561,6 +1658,10 @@ border-bottom: 4px solid #ff007a;
     #masthead > nav > div > div.navbar-header > button{
         margin-top: 20px;
     }
+    
+    #main > div:nth-child(1) > div > header > h1{
+        font-size: 40px;
+    }
 
 /*--------------------------------------------------------------
                             Page Accueil
@@ -1628,6 +1729,22 @@ border-bottom: 4px solid #ff007a;
     margin-bottom: 15px;
    
 }
+
+
+.lien-presta-2, .lien-presta-3 {
+    border-left: 0px solid #ff007a;
+    border-right: 0px solid #ff007a;
+
+}
+.bloc-h1{
+    top:2%;
+}
+
+.bloc-h1>h1{
+    padding:0;
+    font-size:60px;
+}
+
 /*--------------------------------------------------------------
                             Page Equipe
 --------------------------------------------------------------*/
@@ -1687,10 +1804,6 @@ border-bottom: 4px solid #ff007a;
 }
 
 
-.description-prestation.element > article > a.btn.btn-default.btn-voir{
-  
-}
-
 
 
 
@@ -1735,9 +1848,62 @@ border-bottom: 4px solid #ff007a;
 
 
 
+/*Footer */
+
+.footer1 {
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+div.col-xs-12.col-md-5.footer2-1{
+    margin-bottom:80px;
+}
+
+#colophon{
+    padding-bottom: 50px;
+}
+
+.logo-footer>div>img {
+    width: 100%;
+
+}
+
+.footer1 > div{
+    padding: 0;
 }
     
+.entry-content-page-prestation p {
+    width: 100%;
+    margin-left: 0px;
+    padding-left:45px;
+}
 
+#main > div:nth-child(1) > div > header > h1, header > h1{
+        font-size: 30px;
+    }
+
+header > h1.entry-title {
+    font-size: 30px;
+    
+}
+
+div.lien-prestation-home{
+    padding-top: 30px;
+}
+#masthead > nav > div > div.navbar-header > div > a > img{
+    width: 200px;
+}
+
+}
+
+
+@media (min-width: 468px) and (max-width: 768px)  {
+    .bloc-h1{
+    top:10%;
+}
+
+}
 @media (min-width: 768px) and (max-width: 992px)  {
     
 
@@ -1763,6 +1929,22 @@ border-bottom: 4px solid #ff007a;
    
 }
 
+#main > div:nth-child(1) > div > header > h1, header > h1{
+        font-size: 60px;
+    }
+
+header > h1.entry-title {
+    font-size: 60px;
+    
+}
+
+
+
+
+    
+    div.navbar-header > button {
+    margin-top: 20px;
+}
 
 
 /*--------------------------------------------------------------
