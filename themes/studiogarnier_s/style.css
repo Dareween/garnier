@@ -902,6 +902,8 @@ entry-content-single-reference p{
 a.left.carousel-control{
      background-image: url(/wp-content/themes/studiogarnier_s/img/fleche-gauche-carousel.svg);
      background-repeat: no-repeat;
+     background-position:  50% 50%;
+      background-size: 100px 100px;
      //width: 50%;
      //margin-left: 20px;
      
@@ -910,6 +912,8 @@ a.left.carousel-control{
 a.right.carousel-control {
     background-image: url(/wp-content/themes/studiogarnier_s/img/fleche-droite-carousel.svg);
      background-repeat: no-repeat;
+     background-position:  50% 50%;
+     background-size: 100px 100px;
      //margin-right: 20px;
     // width: 50%;
 }
