@@ -61,8 +61,16 @@
                     
                 </span><br>
                 
-                <?php echo do_shortcode('[supsystic-social-sharing id="1"]') ?>
-                
+                <div class="hidden-xs social-links-menu social-links-menu-reference">
+                                            <ul class="nav navbar-nav navbar-left ">
+                                                 <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"></a></li>
+                                                <li><a href="https://twitter.com/Garnier_Event"><div></div></a></li>
+                                                 <li><a href="https://twitter.com/intent/tweet/?url=<?php the_permalink(); ?>&text=Garnier event. <?php the_title() ?> - <?php the_permalink(); ?> "><div></div></a></li>
+                                                  
+                                                
+
+                                            </ul>
+                                        </div>
                
 	</div><!-- .entry-content -->
 

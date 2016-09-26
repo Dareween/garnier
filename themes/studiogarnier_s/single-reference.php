@@ -14,22 +14,21 @@ get_header(); ?>
 		
                 <div class="container">
                 <section class="reference-content">
+                    <div class="bloc-lien-retour-ref">
+                    <a href="<?php echo bloginfo('wpurl');?>/fr/references">retour aux références</a>
+                    </div>
 		<?php
-		while ( have_posts() ) : the_post();
+		while ( have_posts() ) : the_post(); ?>
+               
+                        <div id="nav-reference">
+                            <div class="left single-reference-nav-item"><?php previous_post_link('%link', 'projet précédent'); ?></div>
+                            <div class="right single-reference-nav-item"><?php next_post_link('%link', 'projet suivant'); ?></div>
+                        </div>
+                    
+                    <?php
+                    get_template_part( 'template-parts/content-reference', get_post_format() );
                         
-                        
-                        the_post_navigation();
-                        previous_post_link('%link', '%title', TRUE);
-                        next_post_link( '%link', '%title', TRUE );
-                        
-                   
-			get_template_part( 'template-parts/content-reference', get_post_format() );
-                        
-                        /*the_post_navigation();
-                        previous_post_link('%link','<i class="fa fa-chevron-left"></i><span class="label hidden-mobile">Précédent</span>', TRUE, ' ', '' );
-                        next_post_link( '%link', '<span class="label hidden-mobile">Suivant</span><i class="fa fa-chevron-right"></i>', TRUE, ' ', ''  );*/
-                                                    
-			
+                      
                         
 
 			// If comments are open or we have at least one comment, load up the comment template.
@@ -42,6 +41,8 @@ get_header(); ?>
                     
                 
                 </section>
+                    
+ 
                     
                 </div>
                

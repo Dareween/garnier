@@ -54,7 +54,10 @@ get_header(); ?>
                                                    <article class="content-prestation">
                                                        <h3><a href="<?php echo the_sub_field('url_bouton_prestation'); ?>" class="h3-animation"><?php echo the_sub_field('nom_de_la_prestation'); ?></a></h3>                                              
                                                         <?php echo the_sub_field('description_de_la_prestation'); ?>
-                                                        <a href="<?php echo the_sub_field('url_bouton_prestation'); ?>" class="btn btn-default btn-voir"><?php echo the_sub_field('bouton-voir-prestation'); ?></a>
+                                                       <?php if( get_sub_field('url_bouton_prestation') ): ?>
+                                                            <a href="<?php echo the_sub_field('url_bouton_prestation'); ?>" class="btn btn-default btn-voir"><?php echo the_sub_field('bouton-voir-prestation'); ?></a>
+                                                        <?php endif; ?>
+                                                        
                                                    </article>
                                                
                                                </div>   

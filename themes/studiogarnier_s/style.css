@@ -52,15 +52,7 @@ h1{
 
 
 
-.entry-header-single-reference h1{
-    font-size: 24px;
-}
 
-entry-content-single-reference p{
-    margin-bottom : 30px;
-    margin-bottom : 80px;
-    
-}
 
 
 
@@ -156,7 +148,8 @@ img{
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>li>a:hover,
-#menu-menu-principal > li.menu-item.menu-item-type-post_type.menu-item-object-page.current-menu-ancestor.current-menu-parent.current_page_parent.current_page_ancestor.menu-item-has-children ul > li.active > a {  
+#menu-menu-principal > li.menu-item.menu-item-type-post_type.menu-item-object-page.current-menu-ancestor.current-menu-parent.current_page_parent.current_page_ancestor.menu-item-has-children ul > li.active > a,
+#post-434 > div > div.hidden-xs.hidden-sm.hidden-md.social-links-menu > ul > li> a{  
     color: #ff007a;
     background-color: transparent;
 }
@@ -203,7 +196,7 @@ img{
  
 }
 
-#menu-menu-principal > li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-has-children.menu-item-33.dropdown.open > ul > li.menu-item.menu-item-type-post_type.menu-item-object-page a:hover{
+.dropdown.open > ul > li a:hover{
     background-color: transparent;
 }
 
@@ -664,6 +657,9 @@ box-shadow: 0 0px 0px rgba(0,0,0,0);
     padding-right:30px;
 }
 
+.description-prestation.element > article > p{
+    margin-bottom: 5px;
+}
 
 
 .btn.btn-voir {
@@ -784,13 +780,13 @@ height: auto;
 .meta-post a{
     font-size: 14px;
     color: #000;
-    font-weight: regular; 
+    font-weight: 400; 
 }
     
 .meta-post a:hover{
     font-size: 14px;
     color: #ff007a;
-    font-weight: regular; 
+    font-weight: 400; 
 }
 
 .entry-header-single-reference{
@@ -815,6 +811,124 @@ height: auto;
 .page-taxonomy>div>div{
     margin: 0;
 }
+
+.entry-header-single-reference h1{
+    font-size: 24px;
+}
+
+entry-content-single-reference p{
+    margin-bottom : 30px;
+    margin-bottom : 80px;
+    
+}
+
+
+.nav-reference, .single-reference-nav-item, .single-reference-nav-item>a{
+    color: #ff007a;
+    font-size: 10px;
+}
+
+#nav-reference{
+    width:100%;
+    padding: 25px 0 25px 0;
+}
+
+.left>a{
+    color:#000;
+    display: inline-block;
+    float: left;
+      background-image: url(/wp-content/themes/studiogarnier_s/img/flecheminigauche.png);
+      background-repeat:no-repeat;
+      background-position: left; 
+      padding-left: 15px;
+        
+}
+
+.left>a:hover{
+    color:#ff007a;
+    text-decoration: none;
+    float: left;
+      background-image: url(/wp-content/themes/studiogarnier_s/img/flecheRosegauche.png);
+      background-repeat:no-repeat;
+      background-position: left; 
+      padding-right: 15px;
+    
+}
+.right>a{
+      color:#000;
+    display: inline-block;
+    float: right;
+      background-image: url(/wp-content/themes/studiogarnier_s/img/flecheminidroite.png);
+      background-repeat:no-repeat;
+      background-position: right; 
+      padding-right: 15px;
+        
+      
+}
+
+.right>a:hover{
+    color:#ff007a;
+    text-decoration: none;
+    float: right;
+      background-image: url(/wp-content/themes/studiogarnier_s/img/flecheRosedroite.png);
+      background-repeat:no-repeat;
+      background-position: right; 
+      padding-right: 15px;
+    
+}
+
+
+#primary > main > div > section > .bloc-lien-retour-ref>a{
+    color: #000;
+    text-decoration: none;
+    
+}
+
+#primary > main > div > section > .bloc-lien-retour-ref>a:hover{
+    color: #ff007a;
+    text-decoration: none;
+}
+
+.bloc-lien-retour-ref{
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+
+.carousel-indicators{
+    margin: 0;
+}
+
+a.left.carousel-control{
+     background-image: url(/wp-content/themes/studiogarnier_s/img/fleche-gauche-carousel.svg);
+     background-repeat: no-repeat;
+     //width: 50%;
+     //margin-left: 20px;
+     
+}
+
+a.right.carousel-control {
+    background-image: url(/wp-content/themes/studiogarnier_s/img/fleche-droite-carousel.svg);
+     background-repeat: no-repeat;
+     //margin-right: 20px;
+    // width: 50%;
+}
+
+
+
+
+.social-links-menu.social-links-menu-reference{
+
+    padding:0;
+    margin:0;
+}
+
+
+.entry-content-single-reference .nav>li>a:focus, .entry-content-single-reference .nav>li>a:hover {
+    text-decoration: none;
+    background-color: transparent;
+}
+
 
 
 /*--------------------------------------------------------------
@@ -879,6 +993,7 @@ h2.entry-title-single a:hover, h2.entry-title-single a:focus{
     border-left-color: #ff007a;
     border-top-color: #ff007a;
     margin-bottom: 50px;
+    border-with:2px;
 }
 
 .single-date hr{
@@ -1350,15 +1465,15 @@ section.quelques-references h2 a:hover{
 
 
 .nom-membre-equipe{
-    padding-top:10%;
-    text-transform: uppercase;
+    padding-top:40%;
+   
     font-weight: 700;
     color:#fff;
 }
 
 .fonction-membre-equipe{
     padding-top:2%;
-    font-weight: 700;
+    font-weight: 400;
     color:#fff;
 }
 
@@ -1630,6 +1745,132 @@ border-bottom: 4px solid #ff007a;
       color: #ff007a;
       
 }
+
+/* Formulaire de contact */
+
+.wpcf7-form-control-wrap textarea{
+    width:475px;
+    height: 220px;
+    font-weight: 400;
+    color:#000;
+    background-color: #e6e6e6;
+    border:none;
+    
+}
+
+.wpcf7-form-control-wrap input{
+    width:475px;
+    height: 50px;
+   
+    font-weight: 400;
+    color:#000;
+    background-color: #e6e6e6;
+    border:none;
+}
+
+
+.wpcf7-form-control-wrap textarea{
+    width:475px;
+    height: 200px;
+   padding-top: 10px;
+    font-weight: 400;
+    color:#000;
+    background-color: #e6e6e6;
+    border:none;
+    
+}
+#wpcf7-f556-p25-o1 > form > p:nth-child(2) > label > span > input{
+    width:225px;
+    
+}
+
+#wpcf7-f556-p25-o1 > form > p:nth-child(3) > label > span > input{
+    width:225px;
+    
+}
+
+#wpcf7-f556-p25-o1 > form > p{
+    padding:0;
+}
+
+#wpcf7-f556-p25-o1 > form > p:nth-child(2){
+      display:inline-block;
+      padding:0;
+}
+
+#wpcf7-f556-p25-o1 > form > p:nth-child(3){
+    display:inline-block;
+    padding-left:20px;
+}
+
+#wpcf7-f556-p25-o1 > form > p:nth-child(2)
+
+.wpcf7-form-control-wrap input>span{
+    font-weight: 400;
+    color:#000;
+}
+
+.wpcf7-form-control-wrap textarea>span{
+    font-weight: 400;
+    color:#000;
+}
+
+::-webkit-input-placeholder {
+   color: #000;
+   padding-left: 15px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #000;  
+    padding-left: 15px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #000;  
+    padding-left: 15px;
+}
+
+:-ms-input-placeholder {  
+   color: #000;
+    padding-left: 15px;
+}
+
+#main > div.second-header.container > h2{
+    font-size: 60px;
+     
+}
+#main > div.second-header.container > p{
+  padding: 0 10% 0 10%;
+     margin-top: 20px;
+     text-align: center;
+     font-size: 24px;
+     font-weight: 700;
+     margin-bottom: 100px
+
+}
+
+.wpcf7-form p{
+    margin:0;
+}
+
+.sidebar-contact h3{
+    margin: 0;
+}
+
+l.wpcf7-form label {
+    margin-bottom: 0px; 
+  
+}
+
+
+#wpcf7-f556-p25-o1 > form > p:nth-child(6){
+    margin-top:30px;
+}
+
+.sidebar-contact{
+    font-size: 18px;
+}
+
 /*--------------------------------------------------------------
 -------------------------*****************
                             MEDIAQUERIES
@@ -1820,9 +2061,14 @@ border-bottom: 4px solid #ff007a;
 
 .description-prestation.element > article > a.btn.btn-default.btn-voir{
    font-size: 14px;
-    margin: 30px 20px 120px 45px;
+    margin: 30px 20px 10px 45px;
    
     
+}
+
+
+.description-prestation.element > article{
+    margin-bottom: 110px
 }
 
 .header-taxonomy h1{
@@ -1980,7 +2226,13 @@ header > h1.entry-title {
 
 .description-prestation.element > article > a.btn.btn-default.btn-voir{
     
-    margin-bottom:150px;
+    margin-bottom:10px;
+}
+
+
+
+.description-prestation.element > article{
+    margin-bottom: 110px
 }
     
 .carousel-caption p{
@@ -2002,8 +2254,12 @@ header > h1.entry-title {
     float:none;
     
     font-size: 16px;
-    margin: 30px 20px 120px 45px;
+    margin: 30px 20px 10px 45px;
     
+}
+
+.description-prestation.element > article{
+    margin-bottom: 110px
 }
 
 
@@ -2060,7 +2316,7 @@ header > h1.entry-title {
 }
 
 .vignette{
-    width: 24%;
+    width: 32%;
    
 }
 
@@ -2103,7 +2359,7 @@ header > h1.entry-title {
 }
 
 .vignette{
-    width: 24%;
+    width: 32%;
    
 }
 
@@ -2123,7 +2379,7 @@ header > h1.entry-title {
 }
 
 .vignette{
-    width: 24%;
+    width: 32%;
    
 }
 

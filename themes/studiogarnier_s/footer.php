@@ -48,7 +48,7 @@
                                 <a href=#" class="btn btn-default btn-contact">Nous contacter</a>
                                 <div class="adresse">Garnier Event<br>
                                 7 rue Jan Palach<br>
-                                BP 310031<br>
+                                BP 31031<br>
                                 44801 Saint-Herblain CEDEX<br>
                                 tél : 02 51 78 67 70<br>
                                 </div>
