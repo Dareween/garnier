@@ -53,7 +53,7 @@
                                 tél : 02 51 78 67 70<br>
                                 </div>
                                 <a href=#">Mentions légales</a><br>
-                                <a href=#">Presse</a><br>
+                                <!--<a href=#">Presse</a><br>-->
                                 
                             </div>
 

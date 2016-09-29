@@ -997,7 +997,8 @@ h2.entry-title-single a:hover, h2.entry-title-single a:focus{
     border-left-color: #ff007a;
     border-top-color: #ff007a;
     margin-bottom: 50px;
-    border-with:2px;
+    
+    border-width: 1px;
 }
 
 .single-date hr{
@@ -1481,6 +1482,9 @@ section.quelques-references h2 a:hover{
     color:#fff;
 }
 
+#main > section > div.row.vignettes-equipe > div > div > div > div > div > a{
+    color:#fff;
+}
 
 /*---------*/
 
@@ -1875,6 +1879,9 @@ l.wpcf7-form label {
     font-size: 18px;
 }
 
+div.wpcf7-mail-sent-ok {
+    border: 0px solid #398f14;
+}
 /*--------------------------------------------------------------
 -------------------------*****************
                             MEDIAQUERIES
@@ -2391,6 +2398,12 @@ header > h1.entry-title {
     width: 32%;
    
 }
+
+ .description-prestation article {
+    width: 50%;
+}
+
+
 
     
 }

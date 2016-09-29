@@ -28,6 +28,7 @@ get_header(); ?>
                                                     <div class="thumbnail-text-equipe">
                                                         <div class="nom-membre-equipe"><?php echo $image['title']; ?></div><br>
                                                     <div class="fonction-membre-equipe"> <?php echo $image['caption']; ?></div>
+                                                    <div class="fonction-membre-equipe"><a href="mailto:<?php echo $image['description']; ?>">lui écrire</a></div>
                                                     </div>  
                                                 </div>
                                                   
