@@ -102,7 +102,7 @@ get_header(); ?>
                                         <div class="row vignettes-ref-home">
                                             <?php $loop = new WP_Query( array( 'post_type' => 'reference', 'posts_per_page' => '8' ) ); ?>
                                             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                                             <div class="col-xs-6 col-sm-6 col-md-3 vignette">
+                                             <div class="col-xs-6 col-sm-6 col-md-3 vignette vignette-accueil">
                                                  
                                                 <a href="<?php the_permalink() ?>"><article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                                                     <div class="thumbnail-reference-home"><div class="thumbnail-bg"><?php the_post_thumbnail( 'medium-750' ) ?></div></div>

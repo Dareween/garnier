@@ -1576,6 +1576,11 @@ border-bottom: 4px solid #ff007a;
     float: left;
 }
 
+.vignette-accueil{
+    width: 49%;
+    float: left;
+}
+
 .vignette-taxonomy{
       width: 49%;
     float: left;
@@ -1875,6 +1880,11 @@ l.wpcf7-form label {
     margin-top:30px;
 }
 
+#wpcf7-f556-p25-o1{
+    margin-bottom: 30px;
+     padding-bottom: 30px;
+}
+
 .sidebar-contact{
     font-size: 18px;
 }
@@ -1891,13 +1901,45 @@ div.wpcf7-mail-sent-ok {
 
 @media all and (max-width: 768px)  {
     
+    //Single réferences
+
+.carousel-indicators{
+    text-align: center;
+    bottom: 10px;
+    text-align: center;
+
+}
+
+a.left.carousel-control{
+     background-image: url(/wp-content/themes/studiogarnier_s/img/fleche-gauche-carousel.svg);
+     background-repeat: no-repeat;
+     background-position:  50% 50%;
+      background-size: 50px 50px;
+     //width: 50%;
+     //margin-left: 20px;
+     
+}
+
+a.right.carousel-control {
+    background-image: url(/wp-content/themes/studiogarnier_s/img/fleche-droite-carousel.svg);
+     background-repeat: no-repeat;
+     background-position:  50% 50%;
+     background-size: 50px 50px;
+     //margin-right: 20px;
+    // width: 50%;
+}
     
+#carousel-example-generic > div > div{
+    height:200px;
     
+}
     header > h1.entry-title{
         font-size:30px;
         width:70%;
         top:10px;
     }
+    
+  
     
     .site-branding img{
         max-width:100%
@@ -1994,9 +2036,48 @@ div.wpcf7-mail-sent-ok {
 
 .bloc-h1>h1{
     padding:0;
-    font-size:60px;
+    font-size:30px;
 }
 
+
+  h2.titre-home {
+    font-size: 25px;
+  }
+  
+  .equipe h2{
+      font-size: 25px;
+  }
+  
+  
+ .entry-content h2 {
+    font-size: 25px;
+}
+
+#main > div.second-header.container > h2 {
+    font-size: 25px;
+}
+  
+  .thumbnail-text h5{
+      font-size: 15px;
+  }
+  
+  .thumbnail-text p {
+      font-size: 12px;
+  }
+  
+  .liens-taxo-thumbnail {
+    
+    font-size: 10px;
+}
+
+
+.separateur{
+    width:80px;
+    
+}
+
+
+  
 /*--------------------------------------------------------------
                             Page Equipe
 --------------------------------------------------------------*/
@@ -2152,12 +2233,48 @@ div.lien-prestation-home{
     width: 200px;
 }
 
+//Page contact
+
+#wpcf7-f556-p25-o1 > form > p > label > span > input{
+    width:100%;
 }
 
+
+
+#wpcf7-f556-p25-o1 > form > p:nth-child(3){
+    display:inline-block;
+    padding-left:0px;
+}
+
+/*#wpcf7-f556-p25-o1 > form > p > label > span > input, #wpcf7-f556-p25-o1 > form > p > label > span > textarea{
+    width:100%;
+}*/
+
+
+#main > div> div.col-xs-12.col-md-6.description-prestation.element > article > h3 > a,
+#main > div > div.col-xs-12.col-md-6.description-prestation.element > article > a{
+    
+    font-size:10px;
+    text-align: center;
+}
+
+
+}
 
 @media (min-width: 468px) and (max-width: 768px)  {
     .bloc-h1{
     top:10%;
+}
+
+#carousel-example-generic > div > div{
+    height:300px;
+    
+}
+
+  h1.entry-title.entry-title-page{
+    padding:0;
+    font-size:60px;
+    
 }
 
 }
@@ -2192,6 +2309,12 @@ div.lien-prestation-home{
 
 header > h1.entry-title {
     font-size: 60px;
+    
+}
+
+  h1.entry-title.entry-title-page{
+    padding:0;
+    font-size:80px;
     
 }
 
@@ -2306,7 +2429,62 @@ header > h1.entry-title {
         padding-top: 10px;
         padding-bottom: 10px;
     }
+//Page contact
 
+#wpcf7-f556-p25-o1 > form > p > label > span > input{
+    width:100%;
+}
+
+
+
+
+//Titres
+
+
+
+
+  h1.entry-title.entry-title-page{
+    padding:0;
+    font-size:40px;
+    
+}
+
+
+  h2.titre-home {
+    font-size: 50px;
+  }
+  
+  .equipe h2{
+      font-size: 50px;
+  }
+  
+  
+ .entry-content h2 {
+    font-size: 50px;
+}
+
+#main > div.second-header.container > h2 {
+    font-size: 50px;
+}
+  
+  .thumbnail-text h5{
+      font-size: 30px;
+  }
+  
+  .thumbnail-text p {
+      font-size: 24px;
+  }
+  
+  .liens-taxo-thumbnail {
+    
+    font-size: 20px;
+}
+
+
+.separateur{
+    width:120px;
+    
+}
 
 
 }
@@ -2315,7 +2493,13 @@ header > h1.entry-title {
 
 @media (min-width: 993px) and (max-width: 1200px)  {
     
+h1.entry-title.entry-title-page{
+    padding:0;
+    font-size:90px;
     
+}
+
+
  .description-prestation article {
     width: 100%;
     float: left;
@@ -2336,6 +2520,21 @@ header > h1.entry-title {
   
 }
 
+.vignette-accueil {
+    width: 49%;
+    float: left;
+}
+
+
+//Page contact
+
+#wpcf7-f556-p25-o1 > form > p > label > span > input{
+    width:100%;
+}
+
+#wpcf7-f556-p25-o1 > form > p{
+    padding: 0px;
+}
 
 
 
@@ -2347,7 +2546,7 @@ header > h1.entry-title {
  {
    
     .description-prestation article {
-    width: 70%;
+    width: 80%;
 }
 
 
@@ -2377,6 +2576,11 @@ header > h1.entry-title {
 .vignette-taxonomy{
     width: 48%;
    
+}
+
+.vignette-accueil {
+    width: 24%;
+    float: left;
 }
 
 
