@@ -8,7 +8,9 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-                   
+                    
+ 
+              
 		<?php
 		if ( have_posts() ) :
 
@@ -20,17 +22,30 @@ get_header(); ?>
 
                         <div class="container-fluid">
                             <div class="row">
+    
+                               <header class="entry-header entry-header-page container-fluid">
                                 
-                              <header class="entry-header entry-header-page container-fluid">
-                                <?php the_post_thumbnail( 'full' ); ?>
-                                  <div class="bloc-h1">
-                                <?php the_title( '<h1 class="entry-title entry-title-page">', '.</h1>' ); ?>
-                                  </div>
+                                            <?php $loop = new WP_Query( array( 'post_type' => 'carousel-home', 'posts_per_page' => '1', 'orderby' => 'rand', ) ); ?>
+                                            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                                             
+                                                  <?php the_post_thumbnail( 'full' ) ?>
+                                                    <div class="bloc-h1">
+                                                     <?php the_title( '<h1 class="entry-title entry-title-page">', '.</h1>' ); ?>
+                                                     </div>
+                                            <?php endwhile; wp_reset_query(); ?>
+                                        
+                                  
+                                  
+                  
                               </header><!-- .entry-header -->
                             </div>     
                         </div>
                         
-                        
+                    
+                            
+                                        
+                    
+    
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
@@ -87,6 +102,7 @@ get_header(); ?>
                             
                             </div>     
                         </div> 
+
                     <div class="container-fluid">
                        
                        
@@ -133,10 +149,11 @@ get_header(); ?>
                                  <div class="row">
                                       <div class="col-md-12 partenaires-ref-home">
                                           <div class="row">
-                                        <?php $loop = new WP_Query( array( 'post_type' => 'partenaires', 'posts_per_page' => '6' ) ); ?>
+                                        <?php $loop = new WP_Query( array( 'post_type' => 'partenaires', 'posts_per_page' => '8' ) ); ?>
                                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                                      
-                                          <div class="col-xs-6 col-sm-4 col-md-2 partenaire">
+                                         <!-- <div class="col-xs-6 col-sm-4 col-md-2 partenaire"> -->
+                                           <div class="partenaire">
                                     
                                             <a href="<?php the_field('lien'); ?>">
                                             <img title="logo" onmouseover="this.src='<?php the_field('logo-survol'); ?>'" onmouseout="this.src='<?php the_field('logo'); ?>'" src="<?php the_field('logo'); ?>" alt="Logo" width="100" height="100" /></a>
@@ -162,7 +179,7 @@ get_header(); ?>
                                     <div class="suite-nombre">moments inoubliables par an </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <div class="nombre  circle">8</div>
+                                    <div class="nombre  circle">6</div>
                                     <div class="suite-nombre">collaborateurs sur le pont </div>
                                 </div>
                                 <div class="col-md-3">

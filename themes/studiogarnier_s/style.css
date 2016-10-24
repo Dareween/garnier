@@ -102,6 +102,7 @@ footer a:focus, footer a:hover{
 img{
     height: auto;
     max-width: 100%;
+    
 }
 
 .size-full{
@@ -119,7 +120,10 @@ img{
 /*-------------------------  Navbar ----------------------------*/
 
 
-
+#menu-menu-principal > li.menu-item.current_page_parent>a{
+    color:#e10467;
+    
+}
 .navbar-nav a {
     font-size: 20px;
     color: #000;
@@ -235,7 +239,7 @@ img{
     height: 12px;
     width: 16px;
       margin : 20px 5px;
-    background-image: url(/wp-content/themes/studiogarnier_s/img/pinterest2.png);
+    background-image: url(/wp-content/themes/studiogarnier_s/img/instagram-16x12-nb.png);
    background-repeat:no-repeat;
 }
 
@@ -263,7 +267,7 @@ img{
     height: 12px;
     width: 16px;
   
-    background-image: url(/wp-content/themes/studiogarnier_s/img/pinterest-rose.png);
+    background-image: url(/wp-content/themes/studiogarnier_s/img/instagram-16x12-rose.png);
    background-repeat:no-repeat;
    
 }
@@ -303,20 +307,15 @@ img{
 }
 
 .logo-footer>div>img{
-    margin-top: 60px; 
+    margin-top: 70px; 
     margin-left: auto;
     margin-right: auto;
     
-    width: 35%;
+    width: 25%;
     text-align: center;
     
 }
 
-.footer1{
-    padding-right: 120px;
-    padding-left: 120px;
-    text-align: center;
-}
 
 footer li{
     list-style: none;
@@ -339,11 +338,16 @@ div.col-xs-12.col-md-5.footer2-1 > ul > li > a:hover{
 }
 
 #colophon > div > div:nth-child(1) > div > div.col-xs-12.footer1-1{
-    margin: 50px 0 40px 0;
+    margin: 20px 0 70px 0;
 }
 
 .footer2-2 > a.btn.btn-default.btn-contact{
     margin-bottom: 48px;
+}
+
+
+.pole-evenementiel{
+    padding-left: 0;
 }
 
 /* footer 2-1 */
@@ -359,8 +363,11 @@ div.col-xs-12.col-md-5.footer2-1 > ul > li > a:hover{
 }
 
 .trait-qqs-ref2{
-    height:80px;
-    border-top: 2px solid #fff;
+    //height:80px;
+    
+    border-top: 2px solid #f2f2f2;
+    margin-left: 15px;
+    margin-top: 25px;
    
 }
 
@@ -895,9 +902,7 @@ entry-content-single-reference p{
 }
 
 
-.carousel-indicators{
-    margin: 0;
-}
+
 
 a.left.carousel-control{
      background-image: url(/wp-content/themes/studiogarnier_s/img/fleche-gauche-carousel.svg);
@@ -1523,8 +1528,8 @@ vignette .thumbnail-reference-home img:hover{
 }
 
 .thumbnail-text h5{
-    padding: 20% 10% 0% 10%;
-    font-size: 25px;
+    padding: 20% 5% 0% 5%;
+    font-size: 24px;
     margin:0;
     text-transform: uppercase;
     font-weight: 700;
@@ -1632,6 +1637,18 @@ border-bottom: 4px solid #ff007a;
     margin-left: auto;
            
 }
+
+.partenaire {
+    display: inline-block;
+    width: 12%;
+    height: 12%;
+    text-align: center;
+}
+
+.partenaire img{
+    width: 65%;
+}
+  
 
 
 /*--------------------------------------------------------------
@@ -2077,7 +2094,7 @@ a.right.carousel-control {
 }
 
 
-  
+
 /*--------------------------------------------------------------
                             Page Equipe
 --------------------------------------------------------------*/
@@ -2277,17 +2294,26 @@ div.lien-prestation-home{
     
 }
 
+.partenaire {
+    display: inline-block;
+    width: 48%;
+    height: 48%;
+    text-align: center;
+}
+
+
 }
 @media (min-width: 768px) and (max-width: 992px)  {
     
 
 .partenaire {
     display: inline-block;
-    width: 33%;
-    height: 33%;
+    width: 24%;
+    height: 24%;
     text-align: center;
 }
 
+  
 
 .lien-presta-2, .lien-presta-3{
     border:none;

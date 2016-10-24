@@ -20,22 +20,30 @@
                 <div class='col-md-12 logo-footer footer1'>
                     
                     <div class='col-md-12'>
-                    <img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/LogoGARNIER-EVENT_blanc.svg" alt="logo Garnier Studios ">
+                    <img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/LogoGARNIER-STUDIOS_blanc-900.png" alt="logo Garnier Studios ">
                     
                     </div>
-                        <div class="hidden-xs col-sm-4 trait-qqs-ref2"></div><div class="col-xs-7 col-sm-4 "></div><div class="col-xs-5 col-sm-4"></div>
-               
-                      <div class='col-xs-12 footer1-1'>
+                    <div class="row"><div class="col-xs-7 col-sm-4 trait-qqs-ref2"></div><div class="hidden-xs col-sm-4"></div><div class="col-xs-5 col-sm-4"></div></div>
+                     <div class="row"> 
+                    <div class='col-md-8 footer1-1'>
                           <p class="yapas-photos">Y'a pas photos...</p>
-                          <p class='col-xs-4 pole-evenementiel'>Garnier Event pôle événementiel de Garnier Studios. Depuis 1978, Garnier Studios met ses photographes, ses réalisateurs, ses régisseurs, au service de votre image.</p>
+                          <p class='col-xs-4'>Garnier Event pôle événementiel de Garnier Studios. Depuis 1978, Garnier Studios met ses photographes, ses réalisateurs, ses régisseurs, au service de votre image.</p>
 
                         </div>
-                    
+                         <div class=' hidden-xs hidden-sm col-md-4 footer2-3'>
+                              
+                              <a class="twitter-timeline" data-width="420" data-height="400" data-theme="dark" data-link-color="#ff007a" href="https://twitter.com/Garnier_Event">Tweets by Garnier_Event</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                   
+                    </div>
+                     
+
+                </div>
             </div><!-- end row -->
             <div class="row footer2">
                     
                             <div class='col-xs-12 col-md-5 footer2-1'>
-                                <img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/LogoGARNIER-STUDIOS_blanc.svg" alt="logo Garnier Studios ">
+                                <img src="<?php echo bloginfo('wpurl');?>/wp-content/themes/studiogarnier_s/img/LogoGARNIER-STUDIOS_blanc-900.png" alt="logo Garnier Studios ">
                     
                                 <ul>
                                     <li><a href="#">Habitat.</a></li>
@@ -58,12 +66,7 @@
                                 
                             </div>
 
-                            <div class=' hidden-xs hidden-sm col-xs-12 col-md-3 footer2-3'>
-                              
-                              <a class="twitter-timeline" data-width="420" data-height="400" data-theme="dark" data-link-color="#ff007a" href="https://twitter.com/Garnier_Event">Tweets by Garnier_Event</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                                </div>
-
-                            </div>
+           
                           
                 </div><!-- end row -->
 		<!--<div class="site-info">

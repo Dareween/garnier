@@ -93,12 +93,23 @@
                                         
                                              <div class="hidden-xs hidden-sm hidden-md social-links-menu">
                                             <ul class="nav navbar-nav navbar-right ">
-                                                <li><a href="https://twitter.com/Garnier_Event"><div></div></a></li>
-                                                  <li><a href="https://twitter.com/Garnier_Event"><div></div></a></li>
+                                                  
                                                  <li><a href="https://www.facebook.com/GarnierEvent"></a></li>
+                                                 <li><a href="http://www.pictaram.com/user/garnier_event/3147383809"></a></li>
+                                                 <li><a href="https://twitter.com/Garnier_Event"></a></li>
+                                     
 
                                             </ul>
+                                              
+                                   
                                         </div>
+                                           <!--<?php if ( ! is_active_sidebar( 'social-nav' ) ) {
+                                             return;
+                                                }
+                                             ?>
+                                    
+                                            <?php dynamic_sidebar( 'social-nav' ); ?>
+                            -->
                                         
                   <!--Module search
                   <div class="col-sm-3 col-md-3 pull-right search-navbar">

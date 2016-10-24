@@ -89,7 +89,7 @@ get_header(); ?>
                                 <div class ="retrouvez-aussi">
                              
                                     <p><?php echo the_field('retrouvez_aussi'); ?><br>                                            
-                                    <a href="<?php echo the_field('prestation-suivante'); ?>" class="btn btn-default btn-voir"><?php echo the_field('prestation-suivante'); ?></a>
+                                    <a href="<?php echo the_field('lien_presta_suivante'); ?>" class="btn btn-default btn-voir"><?php echo the_field('prestation-suivante'); ?></a>
                                   </p>
                                 </div>  
                              

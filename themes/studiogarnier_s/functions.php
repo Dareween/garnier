@@ -134,6 +134,16 @@ function studiogarnier_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+        
+        register_sidebar( array(
+		'name'          => esc_html__( 'social-nav', 'studiogarnier' ),
+		'id'            => 'social-nav',
+		'description'   => esc_html__( 'Add widgets here.', 'studiogarnier' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
 }
 add_action( 'widgets_init', 'studiogarnier_widgets_init' );
 
@@ -269,26 +279,25 @@ function add_post_type(){
         
         
 register_post_type(
-		'prestation',
+		'carousel-home',
 			      array(
-			           'label' => 'Prestations',
+			           'label' => 'carousel-home',
 			           'labels' => array(       
-			           		'name' => 'Prestations',       
-			           		'singular_name' => 'Prestation',       
-			           		'all_items' => 'Toutes les Prestations',       
-			           		'add_new_item' => 'Ajouter une Prestation',       
-			           		'edit_item' => 'Éditer une Prestation',       
-			           		'new_item' => 'Créer une nouvelle Prestation',       
-			           		'view_item' => 'Voir Prestation',       
-			           		'search_items' => 'Rechercher parmi les Prestations',       
-			           		'not_found' => 'Aucune Prestation trouvée',       
-			           		'not_found_in_trash'=> 'Aucune Prestation dans la corbeille'       
+			           		'name' => 'carousel-home',       
+			           		'singular_name' => 'image',       
+			           		'all_items' => 'Toutes les image',       
+			           		'add_new_item' => 'Ajouter un cimage',       
+			           		'edit_item' => 'Éditer une image',       
+			           		'new_item' => 'Créer une nouvelle image',       
+			           		'view_item' => 'Voir image',       
+			           		'search_items' => 'Rechercher parmi les images',       
+			           		'not_found' => 'Aucune image trouvée',       
+			           		'not_found_in_trash'=> 'Aucune image dans la corbeille'       
 			           		),     
 			           'public' => true,     
 			           'capability_type' => 'post',     
 			           'supports' => array(       
-			           		'title',       
-			           		'editor',       
+			           		'title',            
 			           		'thumbnail'     
 			           		),     
 			           'has_archive' => true   
@@ -296,6 +305,8 @@ register_post_type(
                 );
 
 
+
+        /*
 register_post_type(
 		'animation',
 			      array(
@@ -322,7 +333,8 @@ register_post_type(
 			           'has_archive' => true   
 			           )
                 );
-
+*/
+        
 register_post_type(
 		'partenaires',
 			      array(
