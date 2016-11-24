@@ -136,14 +136,17 @@ function studiogarnier_widgets_init() {
 	) );
         
         register_sidebar( array(
-		'name'          => esc_html__( 'social-nav', 'studiogarnier' ),
-		'id'            => 'social-nav',
+		'name'          => esc_html__( 'footer-widget', 'studiogarnier' ),
+		'id'            => 'footer-widget',
 		'description'   => esc_html__( 'Add widgets here.', 'studiogarnier' ),
 		'before_widget' => '',
 		'after_widget'  => '',
 		'before_title'  => '',
 		'after_title'   => '',
 	) );
+        
+      
+      
 }
 add_action( 'widgets_init', 'studiogarnier_widgets_init' );
 
@@ -180,7 +183,7 @@ add_action( 'wp_enqueue_scripts', 'studiogarnier_scripts' );
 
 /**
  * Enqueue google font Droid sans 400 / 700.
- */
+ 
 function wpb_add_google_fonts() {
 
 wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Droid+Sans:400,700', false ); 
@@ -188,6 +191,17 @@ wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=D
 
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
 
+*/
+
+function google_fonts() {
+	$query_args = array(
+		'family' => 'Droid+Sans:400,700|Oswald:700',
+		'subset' => 'latin,latin-ext',
+	);
+	wp_register_style( 'google_fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
+            }
+            
+add_action('wp_enqueue_scripts', 'google_fonts');
 
 
 
@@ -446,3 +460,17 @@ function wpc_mime_types($mimes) {
   return $mimes;
 }
 add_filter('upload_mimes', 'wpc_mime_types');
+
+
+
+
+add_filter('tiny_mce_before_init', 'tiny_mce_remove_unused_formats' );
+/*
+ * Modify TinyMCE editor to remove H1.
+ */
+function tiny_mce_remove_unused_formats($init) {
+	// Add block format elements you want to show in dropdown
+	$init['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6;Address=address;Pre=pre';
+	return $init;
+        
+}

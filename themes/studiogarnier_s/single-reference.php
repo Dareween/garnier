@@ -15,7 +15,7 @@ get_header(); ?>
                 <div class="container">
                 <section class="reference-content">
                     <div class="bloc-lien-retour-ref">
-                    <a href="<?php echo bloginfo('wpurl');?>/fr/references">retour aux références</a>
+                    <a href="<?php echo bloginfo('wpurl');?>/fr/references-animations-photos-videos/">retour aux références</a>
                     </div>
 		<?php
 		while ( have_posts() ) : the_post(); ?>

@@ -6,6 +6,29 @@
 --------------------------------------------------------------*/
 
 
+
+@font-face {
+    font-family: 'droid_sansbold';
+    src: url('droidsans-bold-webfont.woff2') format('woff2'),
+         url('droidsans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'droid_sansregular';
+    src: url('droidsans-webfont.woff2') format('woff2'),
+         url('droidsans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 /*--------------------------------------------------------------
                             Body
 --------------------------------------------------------------*/
@@ -22,6 +45,7 @@ select,
 textarea {
 	color: #000;
 	font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+     
 	font-size: 14px;
         
 	/*font-size: 1rem;*/
@@ -172,7 +196,7 @@ img{
     color:#ff007a;
 }
 .navbar-default {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 1);
     /*border-color: gba(255, 255, 255, 0.95);*/
     border:none;
 }
@@ -335,6 +359,7 @@ div.col-xs-12.col-md-5.footer2-1 > ul > li > a:hover{
 }
 .footer2-1 > img{
     width:45%;
+    margin-bottom: 10px;
 }
 
 #colophon > div > div:nth-child(1) > div > div.col-xs-12.footer1-1{
@@ -454,6 +479,11 @@ margin : 8px 0 0px 0;
     font-size:20px;
     margin:0px;
     font-weight: 700;
+    
+}
+
+.footer2 .footer1{
+    margin-bottom: 30px;
     
 }
 
@@ -802,7 +832,7 @@ height: auto;
 
 .entry-header-single-reference .entry-title-reference{
    
-    padding-top: 30px;
+    padding-top: 0px;
     text-align: center;
     margin-bottom:30px;
 }
@@ -837,7 +867,7 @@ entry-content-single-reference p{
 
 #nav-reference{
     width:100%;
-    padding: 25px 0 25px 0;
+    //padding: 25px 0 25px 0;
 }
 
 .left>a{
@@ -897,8 +927,8 @@ entry-content-single-reference p{
 }
 
 .bloc-lien-retour-ref{
-    margin-top: 50px;
-    margin-bottom: 25px;
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
 
@@ -937,6 +967,13 @@ a.right.carousel-control {
     text-decoration: none;
     background-color: transparent;
 }
+
+
+.reference-content article{
+    width: 70%;
+    margin: 0 auto; 
+}
+
 
 
 
@@ -1091,9 +1128,11 @@ div.single-cat-hr > hr{
 }    
 
 
-.carousel-inner>.item{
-    height:600px;
+.carousel-inner>.item, a.right.carousel-control, a.left.carousel-control, .item, div.item.active{
+    height:540px;
 }
+
+
 
 
 .carousel-indicators{
@@ -1973,6 +2012,11 @@ a.right.carousel-control {
     #main > div:nth-child(1) > div > header > h1{
         font-size: 40px;
     }
+    
+.carousel-inner>.item, a.right.carousel-control, a.left.carousel-control, .item, div.item.active, .carousel, .slide{
+    height:180px;
+}
+
 
 /*--------------------------------------------------------------
                             Page Accueil
@@ -2092,6 +2136,7 @@ a.right.carousel-control {
     width:80px;
     
 }
+
 
 
 
@@ -2301,6 +2346,9 @@ div.lien-prestation-home{
     text-align: center;
 }
 
+.carousel-inner>.item, a.right.carousel-control, a.left.carousel-control, .item, div.item.active, .carousel, .slide{
+    height:300px;
+}
 
 }
 @media (min-width: 768px) and (max-width: 992px)  {
@@ -2352,6 +2400,10 @@ header > h1.entry-title {
     margin-top: 20px;
 }
 
+
+.carousel-inner>.item, a.right.carousel-control, a.left.carousel-control, .item, div.item.active, .carousel, .slide{
+    height:350px;
+}
 
 /*--------------------------------------------------------------
                             Page Prestation
@@ -2422,6 +2474,14 @@ header > h1.entry-title {
     margin-bottom: 110px
 }
 
+// changement de point de rupture pour le burger Bootsrap
+
+
+.site-branding img{
+        max-width:100%
+    }
+    
+
 
 // changement de point de rupture pour le burger Bootsrap
 
@@ -2431,8 +2491,17 @@ header > h1.entry-title {
     }
     
 
-.navbar-header {
+
+ //.navbar-default .navbar-collapse {
+  //  background-color: #f5f5f5;
+//}
+    
+    
+     .navbar-header {
         float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
     }
     .navbar-toggle {
         display: block;
@@ -2441,20 +2510,34 @@ header > h1.entry-title {
         border-top: 1px solid transparent;
         box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
     }
+    .navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
     .navbar-collapse.collapse {
         display: none!important;
     }
     .navbar-nav {
         float: none!important;
-        margin: 7.5px -15px;
-    }
-    .navbar-nav>li {
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
         float: none;
     }
     .navbar-nav>li>a {
         padding-top: 10px;
         padding-bottom: 10px;
     }
+    .collapse.in{
+  		display:block !important;
+	}
+
+    
+    .navbar-collapse {
+max-height:100%;}
+    
+    
+    
 //Page contact
 
 #wpcf7-f556-p25-o1 > form > p > label > span > input{
@@ -2494,16 +2577,16 @@ header > h1.entry-title {
 }
   
   .thumbnail-text h5{
-      font-size: 30px;
+      font-size: 20px;
   }
   
   .thumbnail-text p {
-      font-size: 24px;
+      font-size: 18px;
   }
   
   .liens-taxo-thumbnail {
     
-    font-size: 20px;
+    font-size: 15px;
 }
 
 
@@ -2513,9 +2596,9 @@ header > h1.entry-title {
 }
 
 
+
+
 }
-
-
 
 @media (min-width: 993px) and (max-width: 1200px)  {
     
@@ -2562,6 +2645,9 @@ h1.entry-title.entry-title-page{
     padding: 0px;
 }
 
+.carousel-inner>.item, a.right.carousel-control, a.left.carousel-control, .item, div.item.active, .carousel, .slide{
+    height:450px;
+}
 
 
 }

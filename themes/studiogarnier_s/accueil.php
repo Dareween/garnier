@@ -167,10 +167,12 @@ get_header(); ?>
                                  </div>
                              </section>
                         </div>
-                        
                         <section class="nombres container">
                             <div class="row">
+                            <!--<?php the_field('nombres_1', 123); ?>-->
+                        
                                <div class="col-md-3">
+  
                                     <div class="nombre  circle">302</div>
                                     <div class="suite-nombre">x 1000 photos imprimées</div>
                                 </div>
